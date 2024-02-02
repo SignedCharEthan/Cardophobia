@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://g85mm2dvjc66"]
+
+[ext_resource type="Script" path="res://main/Background.gd" id="1_52jqm"]
+
+[sub_resource type="QuadMesh" id="QuadMesh_ibj72"]
+
+[node name="Background" type="Node2D"]
+script = ExtResource("1_52jqm")
+
+[node name="Mesh" type="MeshInstance2D" parent="."]
+mesh = SubResource("QuadMesh_ibj72")

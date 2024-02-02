@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://c1wkxdg4a4qm2"]
+
+[ext_resource type="Script" path="res://scriptkitties/FunctionContainer.gd" id="1_i4r6q"]
+
+[node name="FunctionContainer" type="Node2D"]
+script = ExtResource("1_i4r6q")
+mainName = null
+spacing = null

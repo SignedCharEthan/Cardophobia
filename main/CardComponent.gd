@@ -1,0 +1,1 @@
+class_name CardComponent extends CardComponable

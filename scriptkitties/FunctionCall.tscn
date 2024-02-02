@@ -1,0 +1,28 @@
+[gd_scene load_steps=6 format=3 uid="uid://bntu5jh8a0o45"]
+
+[ext_resource type="Script" path="res://scriptkitties/FunctionCall.gd" id="1_vjuf6"]
+[ext_resource type="PackedScene" uid="uid://dqsbnew2b43yl" path="res://main/TextBox.tscn" id="2_67ctk"]
+[ext_resource type="Theme" uid="uid://c3jtflyapnkm7" path="res://themes/CategoryPretitle.tres" id="3_anymr"]
+[ext_resource type="Theme" uid="uid://bari5vyxhrtx4" path="res://themes/CategoryTitle.tres" id="4_fqyfv"]
+[ext_resource type="Theme" uid="uid://boqnny5sqo68n" path="res://themes/Script.tres" id="5_njkly"]
+
+[node name="FunctionCall" type="Node2D"]
+script = ExtResource("1_vjuf6")
+
+[node name="MainName" parent="." instance=ExtResource("2_67ctk")]
+text = "Example"
+theme = ExtResource("3_anymr")
+fontSize = 50
+
+[node name="FunctionName" parent="." instance=ExtResource("2_67ctk")]
+position = Vector2(209, 0)
+text = ".name()"
+theme = ExtResource("4_fqyfv")
+fontSize = 50
+
+[node name="FunctionScript" parent="." instance=ExtResource("2_67ctk")]
+position = Vector2(25, 70)
+text = "waiting for something to happen?"
+theme = ExtResource("5_njkly")
+fontSize = 36
+boundSize = Vector2(650, 300)
