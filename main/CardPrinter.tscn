@@ -1,0 +1,217 @@
+[gd_scene load_steps=6 format=3 uid="uid://drr888e8hq0me"]
+
+[ext_resource type="Script" path="res://main/CardPrinter.gd" id="1_mrrw3"]
+[ext_resource type="PackedScene" uid="uid://b3006b843lhik" path="res://main/Card.tscn" id="2_fpbtd"]
+[ext_resource type="PackedScene" uid="uid://g85mm2dvjc66" path="res://main/Background.tscn" id="3_vwju0"]
+[ext_resource type="PackedScene" uid="uid://c1wkxdg4a4qm2" path="res://scriptkitties/FunctionContainer.tscn" id="4_jxc88"]
+[ext_resource type="PackedScene" uid="uid://bntu5jh8a0o45" path="res://scriptkitties/FunctionCall.tscn" id="5_okdf8"]
+
+[node name="CardPrinter" type="Node2D"]
+script = ExtResource("1_mrrw3")
+
+[node name="Scratch" parent="." instance=ExtResource("2_fpbtd")]
+visible = false
+
+[node name="Background" parent="Scratch" instance=ExtResource("3_vwju0")]
+scale = Vector2(750, 1050)
+
+[node name="FunctionContainer" parent="Scratch" instance=ExtResource("4_jxc88")]
+position = Vector2(-350, -500)
+mainName = "Scrappy"
+spacing = 35
+
+[node name="scratch" parent="Scratch/FunctionContainer" instance=ExtResource("5_okdf8")]
+mainName = "Scrappy"
+functionName = "scratch"
+functionScript = "deal 3 damage"
+
+[node name="chill" parent="Scratch/FunctionContainer" instance=ExtResource("5_okdf8")]
+position = Vector2(0, 158)
+mainName = "Scrappy"
+functionName = "chill"
+functionScript = "TEMPER -> TEMPER + 2
+if not ANGRY:
+	TEMPER -> TEMPER + 1
+	func()"
+
+[node name="leer" parent="Scratch/FunctionContainer" instance=ExtResource("5_okdf8")]
+position = Vector2(0, 478)
+mainName = "Scrappy"
+functionName = "leer"
+functionScript = "stun the enemy
+if ANGRY:
+	deal 2 damage"
+
+[node name="Pounce" parent="." instance=ExtResource("2_fpbtd")]
+visible = false
+
+[node name="Background" parent="Pounce" instance=ExtResource("3_vwju0")]
+scale = Vector2(750, 1050)
+
+[node name="FunctionContainer" parent="Pounce" instance=ExtResource("4_jxc88")]
+position = Vector2(-350, -500)
+mainName = "Scrappy"
+spacing = 35
+
+[node name="pounce" parent="Pounce/FunctionContainer" instance=ExtResource("5_okdf8")]
+mainName = "Scrappy"
+functionName = "pounce"
+functionScript = "(deal any amount of damage; take 1 damage the same amount of times)"
+
+[node name="Poke" parent="." instance=ExtResource("2_fpbtd")]
+visible = false
+
+[node name="Background" parent="Poke" instance=ExtResource("3_vwju0")]
+scale = Vector2(750, 1050)
+
+[node name="FunctionContainer" parent="Poke" instance=ExtResource("4_jxc88")]
+position = Vector2(-350, -500)
+mainName = "Scrappy"
+spacing = 35
+
+[node name="poke" parent="Poke/FunctionContainer" instance=ExtResource("5_okdf8")]
+mainName = "Scrappy"
+functionName = "poke"
+functionScript = "deal 1 damage
+func()"
+
+[node name="patience" parent="Poke/FunctionContainer" instance=ExtResource("5_okdf8")]
+position = Vector2(0, 212)
+mainName = "Scrappy"
+functionName = "patience"
+functionScript = "if ANGRY:
+	return both hand cards
+	TEMPER -> TEMPER + 1
+else:
+	TEMPER -> TEMPER + 3"
+
+[node name="slash" parent="Poke/FunctionContainer" instance=ExtResource("5_okdf8")]
+position = Vector2(0, 586)
+mainName = "Scrappy"
+functionName = "slash"
+functionScript = "if ANGRY:
+	deal 3 damage
+	func()"
+
+[node name="Meditate" parent="." instance=ExtResource("2_fpbtd")]
+visible = false
+
+[node name="Background" parent="Meditate" instance=ExtResource("3_vwju0")]
+scale = Vector2(750, 1050)
+
+[node name="FunctionContainer" parent="Meditate" instance=ExtResource("4_jxc88")]
+position = Vector2(-350, -500)
+mainName = "Scrappy"
+spacing = 35
+
+[node name="meditate" parent="Meditate/FunctionContainer" instance=ExtResource("5_okdf8")]
+mainName = "Scrappy"
+functionName = "meditate"
+functionScript = "(Scrappy cannot take damage for the rest of the round.)
+if ANGRY:
+	ANGRY -> False
+	TEMPER -> TEMPER + 2"
+
+[node name="Glare" parent="." instance=ExtResource("2_fpbtd")]
+visible = false
+
+[node name="Background" parent="Glare" instance=ExtResource("3_vwju0")]
+scale = Vector2(750, 1050)
+
+[node name="FunctionContainer" parent="Glare" instance=ExtResource("4_jxc88")]
+position = Vector2(-350, -500)
+mainName = "Scrappy"
+spacing = 35
+
+[node name="glare" parent="Glare/FunctionContainer" instance=ExtResource("5_okdf8")]
+mainName = "Scrappy"
+functionName = "glare"
+functionScript = "if (the enemy is damaged, but not dead):
+	ANGRY -> True"
+
+[node name="chill" parent="Glare/FunctionContainer" instance=ExtResource("5_okdf8")]
+position = Vector2(0, 212)
+mainName = "Scrappy"
+functionName = "cower"
+functionScript = "(Scrappy cannot take or deal damage for the rest of the round.)"
+
+[node name="Prowl" parent="." instance=ExtResource("2_fpbtd")]
+visible = false
+
+[node name="Background" parent="Prowl" instance=ExtResource("3_vwju0")]
+scale = Vector2(750, 1050)
+
+[node name="FunctionContainer" parent="Prowl" instance=ExtResource("4_jxc88")]
+position = Vector2(-350, -500)
+mainName = "Scrappy"
+spacing = 35
+
+[node name="prowl" parent="Prowl/FunctionContainer" instance=ExtResource("5_okdf8")]
+mainName = "Scrappy"
+functionName = "prowl"
+functionScript = "ANGRY -> False
+TEMPER -> TEMPER + 1
+func()"
+
+[node name="kick" parent="Prowl/FunctionContainer" instance=ExtResource("5_okdf8")]
+position = Vector2(0, 266)
+mainName = "Scrappy"
+functionName = "kick"
+functionScript = "if ANGRY:
+	deal damage equal to TEMPER
+else:
+	deal 1 damage
+	take 1 damage"
+
+[node name="Hiss" parent="." instance=ExtResource("2_fpbtd")]
+visible = false
+
+[node name="Background" parent="Hiss" instance=ExtResource("3_vwju0")]
+scale = Vector2(750, 1050)
+
+[node name="FunctionContainer" parent="Hiss" instance=ExtResource("4_jxc88")]
+position = Vector2(-350, -500)
+mainName = "Scrappy"
+spacing = 35
+
+[node name="hiss" parent="Hiss/FunctionContainer" instance=ExtResource("5_okdf8")]
+mainName = "Scrappy"
+functionName = "hiss"
+functionScript = "if TEMPER <= 2:
+	ANGRY -> True"
+
+[node name="swipe" parent="Hiss/FunctionContainer" instance=ExtResource("5_okdf8")]
+position = Vector2(0, 212)
+mainName = "Scrappy"
+functionName = "swipe"
+functionScript = "deal damage equal to (4 - TEMPER)
+if ANGRY:
+	deal damage equal to (7 - TEMPER)"
+
+[node name="Gloat" parent="." instance=ExtResource("2_fpbtd")]
+visible = false
+
+[node name="Background" parent="Gloat" instance=ExtResource("3_vwju0")]
+scale = Vector2(750, 1050)
+
+[node name="FunctionContainer" parent="Gloat" instance=ExtResource("4_jxc88")]
+position = Vector2(-350, -500)
+mainName = "Scrappy"
+spacing = 35
+
+[node name="gloat" parent="Gloat/FunctionContainer" instance=ExtResource("5_okdf8")]
+mainName = "Scrappy"
+functionName = "gloat"
+functionScript = "if (the enemy's max HP is over 7):
+	ANGRY -> True
+	func()"
+
+[node name="brawl" parent="Gloat/FunctionContainer" instance=ExtResource("5_okdf8")]
+position = Vector2(0, 266)
+mainName = "Scrappy"
+functionName = "brawl"
+functionScript = "deal 2 damage
+if TEMPER <= 2:
+	deal 2 damage
+if ANGRY:
+	deal 3 damage"

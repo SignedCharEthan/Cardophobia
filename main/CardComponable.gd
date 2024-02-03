@@ -13,3 +13,11 @@ func getComponents() -> Array[CardComponent]:
 		if child is CardComponent:
 			comps.append(child)
 	return comps
+
+## Get all Cells of this Card/Component
+func getCells() -> Array[Cell]:
+	var cells = [] as Array[Cell]
+	for child in get_children():
+		if child is Cell:
+			cells.append(child)
+	return cells
