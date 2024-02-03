@@ -13,7 +13,7 @@ class_name FunctionCall extends CardComponent
 @export_multiline var functionScript = "Waiting for something to happen?" as String:
 	set(newStr):
 		functionScript = newStr
-		($FunctionScript as TextBox).text = scriptifyText(functionScript)
+		$FunctionScript.text = scriptifyText(functionScript)
 
 func _editor_update() -> void:
 	($FunctionScript as TextBox).text = scriptifyText(functionScript)
