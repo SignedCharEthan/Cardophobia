@@ -31,4 +31,4 @@ func getFont() -> Font:
 	else: return null
 
 func getBounds() -> Vector2:
-	return getFont().get_multiline_string_size(text, 0, -1, fontSize)
+	return getFont().get_multiline_string_size(text, 0, boundSize.x, fontSize)

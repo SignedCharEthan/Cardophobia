@@ -10,10 +10,13 @@ class_name FunctionCall extends CardComponent
 	set(newStr):
 		functionName = newStr
 		groupFunctionNames()
-@export_multiline var functionScript = "waiting for something to happen?" as String:
+@export_multiline var functionScript = "Waiting for something to happen?" as String:
 	set(newStr):
 		functionScript = newStr
 		($FunctionScript as TextBox).text = scriptifyText(functionScript)
+
+func _editor_update() -> void:
+	($FunctionScript as TextBox).text = scriptifyText(functionScript)
 
 func groupFunctionNames() -> void:
 	var fn = $FunctionName as TextBox
@@ -26,7 +29,9 @@ func groupFunctionNames() -> void:
 	fn.position.y = $MainName.position.y
 
 func scriptifyText(text: String) -> String:
-	text.replace("->", "➝")
+	text = text.replace("->", "➝")
+	text = text.replace("<=", "≤")
+	text = text.replace(">=", "≥")
 	return text
 
 func getBounds() -> Vector2:

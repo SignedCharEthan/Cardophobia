@@ -10,7 +10,6 @@
 script = ExtResource("1_mrrw3")
 
 [node name="Scratch" parent="." instance=ExtResource("2_fpbtd")]
-visible = false
 
 [node name="Background" parent="Scratch" instance=ExtResource("3_vwju0")]
 scale = Vector2(750, 1050)
@@ -56,7 +55,8 @@ spacing = 35
 [node name="pounce" parent="Pounce/FunctionContainer" instance=ExtResource("5_okdf8")]
 mainName = "Scrappy"
 functionName = "pounce"
-functionScript = "(deal any amount of damage; take 1 damage the same amount of times)"
+functionScript = "(Deal any amount of damage.
+Take 1 damage the same amount of times.)"
 
 [node name="Poke" parent="." instance=ExtResource("2_fpbtd")]
 visible = false
@@ -129,8 +129,8 @@ functionName = "glare"
 functionScript = "if (the enemy is damaged, but not dead):
 	ANGRY -> True"
 
-[node name="chill" parent="Glare/FunctionContainer" instance=ExtResource("5_okdf8")]
-position = Vector2(0, 212)
+[node name="cower" parent="Glare/FunctionContainer" instance=ExtResource("5_okdf8")]
+position = Vector2(0, 266)
 mainName = "Scrappy"
 functionName = "cower"
 functionScript = "(Scrappy cannot take or deal damage for the rest of the round.)"
@@ -184,9 +184,11 @@ functionScript = "if TEMPER <= 2:
 position = Vector2(0, 212)
 mainName = "Scrappy"
 functionName = "swipe"
-functionScript = "deal damage equal to (4 - TEMPER)
+functionScript = "deal damage equal to
+(4 - TEMPER)
 if ANGRY:
-	deal damage equal to (7 - TEMPER)"
+	deal damage equal to
+	(7 - TEMPER)"
 
 [node name="Gloat" parent="." instance=ExtResource("2_fpbtd")]
 visible = false
@@ -207,7 +209,7 @@ functionScript = "if (the enemy's max HP is over 7):
 	func()"
 
 [node name="brawl" parent="Gloat/FunctionContainer" instance=ExtResource("5_okdf8")]
-position = Vector2(0, 266)
+position = Vector2(0, 320)
 mainName = "Scrappy"
 functionName = "brawl"
 functionScript = "deal 2 damage
