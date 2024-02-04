@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=3 uid="uid://bntu5jh8a0o45"]
+[gd_scene load_steps=6 format=3 uid="uid://db6me8bfemaiv"]
 
 [ext_resource type="Script" path="res://scriptkitties/FunctionCall.gd" id="1_vjuf6"]
 [ext_resource type="PackedScene" uid="uid://dqsbnew2b43yl" path="res://main/TextBox.tscn" id="2_67ctk"]
@@ -8,7 +8,6 @@
 
 [node name="FunctionCall" type="Node2D"]
 script = ExtResource("1_vjuf6")
-functionScriptText = null
 
 [node name="MainName" parent="." instance=ExtResource("2_67ctk")]
 text = "Example"
