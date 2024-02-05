@@ -1,27 +1,9 @@
-[gd_scene load_steps=5 format=3 uid="uid://cs7pklk1pwbwq"]
+[gd_scene load_steps=2 format=3 uid="uid://cs7pklk1pwbwq"]
 
-[ext_resource type="PackedScene" uid="uid://b3006b843lhik" path="res://main/Card.tscn" id="1_7ak6c"]
-[ext_resource type="PackedScene" uid="uid://g85mm2dvjc66" path="res://main/Background.tscn" id="2_62knn"]
-[ext_resource type="PackedScene" uid="uid://dqsbnew2b43yl" path="res://main/TextBox.tscn" id="3_7wqvp"]
-[ext_resource type="Theme" uid="uid://bari5vyxhrtx4" path="res://themes/CategoryTitle.tres" id="4_76o6h"]
+[ext_resource type="PackedScene" uid="uid://bpab24orfy2gv" path="res://scriptkitties/ScrappyFuncCardOverhead.tscn" id="1_6j03q"]
 
 [node name="TestingGrounds" type="Node2D"]
 
-[node name="Card" parent="." instance=ExtResource("1_7ak6c")]
-
-[node name="Background" parent="Card" instance=ExtResource("2_62knn")]
-scale = Vector2(750, 1050)
-
-[node name="TextBox" parent="Card" instance=ExtResource("3_7wqvp")]
-position = Vector2(444, 140)
-text = "Bruh"
-theme = ExtResource("4_76o6h")
-bound_size = Vector2(300, 300)
-font_size = 65
-
-[node name="TextBox2" parent="Card" instance=ExtResource("3_7wqvp")]
-position = Vector2(442, 231)
-text = "Example Text m,an"
-theme = ExtResource("4_76o6h")
-bound_size = Vector2(300, 300)
-font_size = 43
+[node name="ScrappyFuncCardOverhead" parent="." instance=ExtResource("1_6j03q")]
+u_name_1 = "scratch"
+u_script_1 = "deal 3 damage"
