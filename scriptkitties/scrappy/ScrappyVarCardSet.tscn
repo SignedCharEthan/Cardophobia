@@ -1,0 +1,26 @@
+[gd_scene load_steps=5 format=3 uid="uid://d1nxu8oxq182t"]
+
+[ext_resource type="PackedScene" uid="uid://mgyppjnsnfe2" path="res://main/CardSet.tscn" id="1_hwlfo"]
+[ext_resource type="PackedScene" uid="uid://bxpskul70u8c4" path="res://scriptkitties/IntCard.tscn" id="2_g42th"]
+[ext_resource type="PackedScene" uid="uid://bts1i3hly0b5a" path="res://scriptkitties/BoolCard.tscn" id="3_cn7xy"]
+[ext_resource type="PackedScene" uid="uid://c0nr5dqhx8mqq" path="res://scriptkitties/scrappy/ScrappyMainCard.tscn" id="4_s77dk"]
+
+[node name="ScrappyVars" instance=ExtResource("1_hwlfo")]
+
+[node name="INT2" parent="." index="0" instance=ExtResource("2_g42th")]
+
+[node name="INT" parent="." index="1" instance=ExtResource("2_g42th")]
+
+[node name="Scrappy" parent="." index="2" instance=ExtResource("4_s77dk")]
+
+[node name="BOOL" parent="." index="3" instance=ExtResource("3_cn7xy")]
+
+[node name="INT4" parent="." index="4" instance=ExtResource("2_g42th")]
+
+[node name="INT3" parent="." index="5" instance=ExtResource("2_g42th")]
+
+[node name="BOOL4" parent="." index="6" instance=ExtResource("3_cn7xy")]
+
+[node name="BOOL3" parent="." index="7" instance=ExtResource("3_cn7xy")]
+
+[node name="BOOL2" parent="." index="8" instance=ExtResource("3_cn7xy")]

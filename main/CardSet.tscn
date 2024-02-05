@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://mgyppjnsnfe2"]
+
+[ext_resource type="Script" path="res://main/CardSet.gd" id="1_lxh34"]
+
+[node name="CardSet" type="Node2D"]
+script = ExtResource("1_lxh34")

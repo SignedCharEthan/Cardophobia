@@ -1,14 +1,16 @@
 extends Node2D
 
 @onready var subView = $SubViewport as SubViewport
-@onready var cardParent = subView.get_child(0)
+@onready var cardParent = subView.get_child(0) as CardSet
 @onready var cards = cardParent.get_children()
 
+@export_global_dir var path = "" as String
 
 var Node_CutLines = preload("res://main/CutLines.tscn")
 
 func _ready() -> void:
 	_spreadCards()
+	cardParent._editor_update()
 	
 	
 func _spreadCards():
@@ -31,6 +33,6 @@ func _unhandled_key_input(event):
 		#capture = camera.get_viewport().get_texture().get_image()
 		var capture = subView.get_texture().get_image()
 		var time = Time.get_datetime_string_from_system().replace(":","-")
-		var path = "C:\\users\\emanr\\Videos\\Cardophobia\\"
-		var filename = path + "Screenshot-{0}.png".format({"0":time})
+		
+		var filename = path + "/Screenshot-{0}.png".format({"0":time})
 		capture.save_png(filename)

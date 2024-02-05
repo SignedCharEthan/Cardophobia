@@ -1,31 +1,30 @@
-[gd_scene load_steps=6 format=3 uid="uid://b3yklnqjoig18"]
+[gd_scene load_steps=6 format=3 uid="uid://bts1i3hly0b5a"]
 
 [ext_resource type="PackedScene" uid="uid://b3006b843lhik" path="res://main/Card.tscn" id="1_okndt"]
-[ext_resource type="PackedScene" uid="uid://g85mm2dvjc66" path="res://main/Background.tscn" id="2_witsb"]
+[ext_resource type="PackedScene" uid="uid://61r7s2d0wbxx" path="res://main/RectangleComponent.tscn" id="2_2ac76"]
 [ext_resource type="PackedScene" uid="uid://dqsbnew2b43yl" path="res://main/TextBox.tscn" id="3_btedf"]
+[ext_resource type="PackedScene" uid="uid://bn6cu83bsgbjw" path="res://main/TextBoxCentered.tscn" id="3_wetph"]
 [ext_resource type="Theme" uid="uid://bari5vyxhrtx4" path="res://themes/CategoryTitle.tres" id="4_450s1"]
-[ext_resource type="Theme" uid="uid://boqnny5sqo68n" path="res://themes/Script.tres" id="5_ej5k5"]
 
-[node name="BOOLCard" instance=ExtResource("1_okndt")]
+[node name="BOOL" instance=ExtResource("1_okndt")]
 
-[node name="Background" parent="." index="0" instance=ExtResource("2_witsb")]
-scale = Vector2(750, 1050)
+[node name="RectangleComponent" parent="." index="0" instance=ExtResource("2_2ac76")]
+width = 750
+height = 1050
+color = Color(1, 1, 1, 1)
 
-[node name="TextBox" parent="." index="1" instance=ExtResource("3_btedf")]
-position = Vector2(-73, -37)
-text = "BOOL"
-theme = ExtResource("4_450s1")
-fontSize = 50
+[node name="False" parent="." index="1" instance=ExtResource("3_wetph")]
+position = Vector2(375, 25)
 
-[node name="False" parent="." index="2" instance=ExtResource("3_btedf")]
-position = Vector2(-54, -505)
-text = "False"
-theme = ExtResource("5_ej5k5")
-fontSize = 36
-
-[node name="True" parent="." index="3" instance=ExtResource("3_btedf")]
-position = Vector2(46, 505)
+[node name="True" parent="." index="2" instance=ExtResource("3_wetph")]
+position = Vector2(375, 1025)
 rotation = 3.14159
 text = "True"
-theme = ExtResource("5_ej5k5")
-fontSize = 36
+
+[node name="BOOL" parent="." index="3" instance=ExtResource("3_btedf")]
+position = Vector2(0, 475)
+text = "BOOL"
+theme = ExtResource("4_450s1")
+bound_size = Vector2(750, 300)
+font_size = 80
+alignment = 1

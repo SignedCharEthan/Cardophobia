@@ -1,3 +1,61 @@
-[gd_scene format=3 uid="uid://eakbgmyda7bt"]
+[gd_scene load_steps=6 format=3 uid="uid://bxpskul70u8c4"]
 
-[node name="IntCard" type="Node2D"]
+[ext_resource type="PackedScene" uid="uid://b3006b843lhik" path="res://main/Card.tscn" id="1_das33"]
+[ext_resource type="PackedScene" uid="uid://61r7s2d0wbxx" path="res://main/RectangleComponent.tscn" id="2_5y2yc"]
+[ext_resource type="PackedScene" uid="uid://bn6cu83bsgbjw" path="res://main/TextBoxCentered.tscn" id="3_erhuq"]
+[ext_resource type="PackedScene" uid="uid://dqsbnew2b43yl" path="res://main/TextBox.tscn" id="4_hym8g"]
+[ext_resource type="Theme" uid="uid://bari5vyxhrtx4" path="res://themes/CategoryTitle.tres" id="5_lcld4"]
+
+[node name="INT" instance=ExtResource("1_das33")]
+
+[node name="RectangleComponent" parent="." index="0" instance=ExtResource("2_5y2yc")]
+width = 750
+height = 1050
+color = Color(1, 1, 1, 1)
+
+[node name="0" parent="." index="1" instance=ExtResource("3_erhuq")]
+position = Vector2(375, 25)
+text = "0"
+
+[node name="1" parent="." index="2" instance=ExtResource("3_erhuq")]
+position = Vector2(725, 25)
+rotation = 0.785398
+text = "1"
+
+[node name="2" parent="." index="3" instance=ExtResource("3_erhuq")]
+position = Vector2(725, 525)
+rotation = 1.5708
+text = "2"
+
+[node name="3" parent="." index="4" instance=ExtResource("3_erhuq")]
+position = Vector2(725, 1025)
+rotation = 2.35619
+text = "3"
+
+[node name="4" parent="." index="5" instance=ExtResource("3_erhuq")]
+position = Vector2(375, 1025)
+rotation = 3.14159
+text = "4"
+
+[node name="5" parent="." index="6" instance=ExtResource("3_erhuq")]
+position = Vector2(25, 1025)
+rotation = 3.92699
+text = "5"
+
+[node name="6" parent="." index="7" instance=ExtResource("3_erhuq")]
+position = Vector2(25, 525)
+rotation = 4.71239
+text = "6"
+
+[node name="7" parent="." index="8" instance=ExtResource("3_erhuq")]
+position = Vector2(25, 25)
+rotation = 5.32325
+text = "7"
+
+[node name="INT" parent="." index="9" instance=ExtResource("4_hym8g")]
+position = Vector2(0, 475)
+text = "INT"
+theme = ExtResource("5_lcld4")
+bound_size = Vector2(750, 300)
+font_size = 80
+alignment = 1

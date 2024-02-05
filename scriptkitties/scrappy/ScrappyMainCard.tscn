@@ -1,0 +1,46 @@
+[gd_scene load_steps=7 format=3 uid="uid://c0nr5dqhx8mqq"]
+
+[ext_resource type="PackedScene" uid="uid://b3006b843lhik" path="res://main/Card.tscn" id="1_w3ooq"]
+[ext_resource type="PackedScene" uid="uid://61r7s2d0wbxx" path="res://main/RectangleComponent.tscn" id="2_7rbab"]
+[ext_resource type="PackedScene" uid="uid://dqsbnew2b43yl" path="res://main/TextBox.tscn" id="3_kghd6"]
+[ext_resource type="Theme" uid="uid://bari5vyxhrtx4" path="res://themes/CategoryTitle.tres" id="4_rgn76"]
+[ext_resource type="Theme" uid="uid://c3jtflyapnkm7" path="res://themes/CategoryPretitle.tres" id="5_ms5d1"]
+[ext_resource type="Theme" uid="uid://boqnny5sqo68n" path="res://themes/Script.tres" id="6_dl42n"]
+
+[node name="Scrappy" instance=ExtResource("1_w3ooq")]
+
+[node name="RectangleComponent" parent="." index="0" instance=ExtResource("2_7rbab")]
+width = 750
+height = 1050
+color = Color(1, 1, 1, 1)
+
+[node name="Name" parent="." index="1" instance=ExtResource("3_kghd6")]
+position = Vector2(0, 425)
+text = "Scrappy"
+theme = ExtResource("4_rgn76")
+bound_size = Vector2(750, 300)
+font_size = 85
+alignment = 1
+
+[node name="Tagline" parent="." index="2" instance=ExtResource("3_kghd6")]
+position = Vector2(0, 536)
+text = "Main Card"
+theme = ExtResource("5_ms5d1")
+bound_size = Vector2(750, 300)
+font_size = 40
+alignment = 1
+
+[node name="TEMPER" parent="." index="3" instance=ExtResource("3_kghd6")]
+text = "TEMPER"
+theme = ExtResource("6_dl42n")
+bound_size = Vector2(750, 300)
+font_size = 36
+alignment = 1
+
+[node name="ANGRY" parent="." index="4" instance=ExtResource("3_kghd6")]
+position = Vector2(0, 1000)
+text = "ANGRY"
+theme = ExtResource("6_dl42n")
+bound_size = Vector2(750, 300)
+font_size = 36
+alignment = 1

@@ -37,6 +37,9 @@ func _local_update() -> void:
 	super()
 
 func getContentBounds() -> Vector2:
+	if (function_name == ""):
+		return Vector2.ZERO
+	
 	return Vector2(
 		max(
 			kittyName.getContentBounds().x + functionName.getContentBounds().x,

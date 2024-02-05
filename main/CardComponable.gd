@@ -1,4 +1,13 @@
+@tool
+
 class_name CardComponable extends Node2D
+
+func _ready():
+	_editor_update()
+
+func _notification(what):
+	if what == NOTIFICATION_EDITOR_POST_SAVE:
+		_editor_update()
 
 ## Updates this Card/Component and all children that are also
 ## Cards or Components, specifically geared towards in-editor updates.

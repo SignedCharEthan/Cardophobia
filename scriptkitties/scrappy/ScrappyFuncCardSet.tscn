@@ -1,0 +1,117 @@
+[gd_scene load_steps=4 format=3 uid="uid://m5x8pmja6pkl"]
+
+[ext_resource type="PackedScene" uid="uid://mgyppjnsnfe2" path="res://main/CardSet.tscn" id="1_pp867"]
+[ext_resource type="PackedScene" uid="uid://dlxkmwcr6benm" path="res://scriptkitties/scrappy/ScrappyInfoCard.tscn" id="2_wl662"]
+[ext_resource type="PackedScene" uid="uid://bpab24orfy2gv" path="res://scriptkitties/scrappy/ScrappyFuncCardOverhead.tscn" id="3_2ach3"]
+
+[node name="ScrappyFuncs" instance=ExtResource("1_pp867")]
+
+[node name="Scrappy" parent="." index="0" instance=ExtResource("2_wl662")]
+
+[node name="ScrappyFuncCardOverhead" parent="." index="1" instance=ExtResource("3_2ach3")]
+u_name_1 = "scratch"
+u_script_1 = "deal 3 damage"
+u_name_2 = "chill"
+u_script_2 = "TEMPER -> TEMPER + 1
+if not ANGRY:
+	TEMPER -> TEMPER + 2"
+d_name_1 = "leer"
+d_script_1 = "if ANGRY:
+	deal 2 damage
+func()"
+d_name_2 = "relentless_claw"
+d_script_2 = "deal 4 damage
+take 1 damage"
+
+[node name="ScrappyFuncCardOverhead2" parent="." index="2" instance=ExtResource("3_2ach3")]
+u_name_1 = "poke"
+u_script_1 = "deal 1 damage
+func()"
+u_name_2 = "upperclaw"
+u_script_2 = "deal 3 damage
+take 1 damage
+func()"
+d_name_1 = "patience"
+d_script_1 = "if ANGRY:
+	discard both hand cards
+	TEMPER -> TEMPER + 1
+else:
+	TEMPER -> TEMPER + 3"
+
+[node name="ScrappyFuncCardOverhead3" parent="." index="3" instance=ExtResource("3_2ach3")]
+u_name_1 = "meditate"
+u_script_1 = "(Scrappy cannot take damage for the rest of the round)"
+d_name_1 = "ponder"
+d_script_1 = "(all of Scrappy's attacks this turn deal +1 damage)
+func()"
+d_name_2 = "overhead_claw"
+d_script_2 = "deal 2 damage
+if ANGRY:
+	deal 2 damage"
+
+[node name="ScrappyFuncCardOverhead4" parent="." index="4" instance=ExtResource("3_2ach3")]
+u_name_1 = "pounce"
+u_script_1 = "(Deal any amount of damage. Take 1 damage the same amount of times.)"
+d_name_1 = "slash"
+d_script_1 = "deal 1 damage
+if ANGRY:
+	deal 4 damage
+	TEMPER -> TEMPER + 1"
+d_name_2 = "quick_slash"
+d_script_2 = "if ANGRY:
+	deal 3 damage
+	func()"
+
+[node name="ScrappyFuncCardOverhead5" parent="." index="5" instance=ExtResource("3_2ach3")]
+u_name_1 = "prowl"
+u_script_1 = "ANGRY -> False
+TEMPER -> TEMPER + 1
+func()"
+u_name_2 = "kick"
+u_script_2 = "if ANGRY:
+	deal damage equal to TEMPER
+else:
+	deal 1 damage
+	take 1 damage"
+d_name_1 = "berserker_calling"
+d_script_1 = "if (at least 5 enemies are wiped):
+	ANGRY -> True"
+
+[node name="ScrappyFuncCardOverhead6" parent="." index="6" instance=ExtResource("3_2ach3")]
+u_name_1 = "hiss"
+u_script_1 = "if TEMPER <= 2:
+	ANGRY -> True"
+u_name_2 = "choke"
+u_script_2 = "deal 6 damage
+take 3 damage"
+d_name_1 = "sswipe"
+d_script_1 = "deal damage equal to
+(4 - TEMPER)
+if ANGRY:
+	deal damage equal to
+	(7 - TEMPER)"
+
+[node name="ScrappyFuncCardOverhead7" parent="." index="7" instance=ExtResource("3_2ach3")]
+u_name_1 = "glare"
+u_script_1 = "if (the enemy is damaged, but not dead):
+	ANGRY -> True"
+u_name_2 = "cower"
+u_script_2 = "(Scrappy cannot take or deal damage for the rest of the round.)"
+d_name_1 = "shove"
+d_script_1 = "deal damage equal to TEMPER"
+
+[node name="ScrappyFuncCardOverhead8" parent="." index="8" instance=ExtResource("3_2ach3")]
+u_name_1 = "brawl"
+u_script_1 = "deal 2 damage
+if TEMPER <= 2:
+	deal 2 damage
+if ANGRY:
+	deal 3 damage"
+d_name_1 = "gloat"
+d_script_1 = "if (the enemy's max HP is over 7):
+	ANGRY -> True
+	func()"
+d_name_2 = "bite"
+d_script_2 = "deal 3 damage
+if ANGRY:
+	deal 3 damage"
