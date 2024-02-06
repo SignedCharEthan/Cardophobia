@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://ddvly2myy1b55"]
+[gd_scene load_steps=5 format=3 uid="uid://ddvly2myy1b55"]
 
 [ext_resource type="Script" path="res://main/CardPrinter.gd" id="1_mrrw3"]
 [ext_resource type="PackedScene" uid="uid://d1nxu8oxq182t" path="res://scriptkitties/scrappy/ScrappyVarCardSet.tscn" id="2_2cg6j"]
+[ext_resource type="PackedScene" uid="uid://bojdnjwh0iqj6" path="res://scriptkitties/evilappliances/EvilAppliancesABSet.tscn" id="2_52v6q"]
 [ext_resource type="PackedScene" uid="uid://m5x8pmja6pkl" path="res://scriptkitties/scrappy/ScrappyFuncCardSet.tscn" id="2_jkq3a"]
 
 [node name="CardPrinter" type="Node2D"]
@@ -12,7 +13,10 @@ path = "C:/Users/emanr/Documents/CardophobiaOutput"
 size = Vector2i(2250, 3150)
 render_target_update_mode = 4
 
-[node name="ScrappyFuncs" parent="SubViewport" instance=ExtResource("2_jkq3a")]
-
 [node name="ScrappyVars" parent="SubViewport" instance=ExtResource("2_2cg6j")]
+
+[node name="EvilAppliancesAB" parent="SubViewport" instance=ExtResource("2_52v6q")]
+visible = false
+
+[node name="ScrappyFuncs" parent="SubViewport" instance=ExtResource("2_jkq3a")]
 visible = false

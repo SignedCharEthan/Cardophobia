@@ -14,10 +14,10 @@ height = 1050
 color = Color(1, 1, 1, 1)
 
 [node name="False" parent="." index="1" instance=ExtResource("3_wetph")]
-position = Vector2(375, 25)
+position = Vector2(375, 40)
 
 [node name="True" parent="." index="2" instance=ExtResource("3_wetph")]
-position = Vector2(375, 1025)
+position = Vector2(375, 1010)
 rotation = 3.14159
 text = "True"
 

@@ -61,11 +61,11 @@ func applyBBCode() -> String:
 	var bbcode_text = text
 	
 	if alignment == 0:
-		bbcode_text = "[left]" + bbcode_text + "[/left]"
+		bbcode_text = "[left]" + str(bbcode_text) + "[/left]"
 	elif alignment == 1:
-		bbcode_text = "[center]" + bbcode_text + "[/center]"
+		bbcode_text = "[center]" + str(bbcode_text) + "[/center]"
 	elif alignment == 2:
-		bbcode_text = "[right]" + bbcode_text + "[/right]"
+		bbcode_text = "[right]" + str(bbcode_text) + "[/right]"
 	
 	return bbcode_text
 
@@ -79,4 +79,4 @@ func getFont() -> Font:
 ## The bounds are based on the text, theme, and font size override.
 func getContentBounds() -> Vector2:
 	return getFont().get_multiline_string_size(
-		text, 0, bound_size.x, font_size)
+		str(text), 0, bound_size.x, font_size)

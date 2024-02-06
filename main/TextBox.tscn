@@ -8,7 +8,7 @@ script = ExtResource("1_4c8pt")
 [node name="RichTextLabel" type="RichTextLabel" parent="."]
 offset_right = 300.0
 offset_bottom = 300.0
-theme_override_font_sizes/normal_font_size = 0
+theme_override_font_sizes/normal_font_size = 24
 bbcode_enabled = true
 text = "Example Text"
 fit_content = true

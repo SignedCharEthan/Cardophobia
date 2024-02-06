@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://bpab24orfy2gv"]
+[gd_scene load_steps=6 format=3 uid="uid://bpab24orfy2gv"]
 
 [ext_resource type="Script" path="res://scriptkitties/scrappy/ScrappyFuncCardOverhead.gd" id="1_0vxcp"]
 [ext_resource type="PackedScene" uid="uid://61r7s2d0wbxx" path="res://main/RectangleComponent.tscn" id="2_fa10o"]
 [ext_resource type="PackedScene" uid="uid://bufpx7o6o2ks" path="res://main/VerticalContainer.tscn" id="3_ycnwf"]
 [ext_resource type="PackedScene" uid="uid://c1f1rpvdv7f4u" path="res://scriptkitties/AbilityFuncCall.tscn" id="4_mtd84"]
+[ext_resource type="Texture2D" uid="uid://c6u1mr5jtdc75" path="res://scriptkitties/scrappy/ScrappyIcon.png" id="5_v7kjn"]
 
 [node name="ScrappyFuncCardOverhead" type="Node2D"]
 script = ExtResource("1_0vxcp")
@@ -12,6 +13,11 @@ script = ExtResource("1_0vxcp")
 width = 750
 height = 1050
 color = Color(1, 1, 1, 1)
+
+[node name="ScrappyIcon" type="Sprite2D" parent="."]
+position = Vector2(696, 50)
+scale = Vector2(0.570834, 0.570834)
+texture = ExtResource("5_v7kjn")
 
 [node name="UpFuncs" parent="." instance=ExtResource("3_ycnwf")]
 position = Vector2(25, 25)
