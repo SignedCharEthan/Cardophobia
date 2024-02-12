@@ -28,4 +28,3 @@ func()"
 visible = false
 
 [node name="FrankInfoCard" parent="." instance=ExtResource("3_6fthk")]
-visible = false

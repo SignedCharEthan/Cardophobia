@@ -26,16 +26,14 @@ alignment = 1
 position = Vector2(25, 150)
 text = "Frank the Cat is a blind, deaf, and mute cat who derives ephemeral powers from the Eldritch Cats.
 
-> 
+> SEE / HEAR / SPEAK - BOOL (True):
+	These are Frank's Wisdom.  When Frank takes damage, change a true Wisdom to false or permanently remove a false Wisdom by bottom-decking it as a func card.  Frank's scripts sometimes require a certain Wisdom to be true to be called.
 
-> ANGRY - BOOL (False):
-	Cannot be changed if Scrappy's TEMPER is 0.
-
-> ALLOWANCE - PASSIVE:
-	TEMPER can only be decreased by 3 per damage instance.
+> MISFORTUNE - PASSIVE (Difficulty C+):
+	When Frank receives more than 4 damage, it is considered two damage instances.
 
 > WIPE CONDITION:
-	Scrappy wipes when he takes damage while his TEMPER is 0."
+	Frank wipes when he receives damage with no Wisdom."
 theme = ExtResource("5_bs2t6")
 bound_size = Vector2(700, 1000)
 font_size = 30

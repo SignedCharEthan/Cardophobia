@@ -24,12 +24,12 @@ alignment = 1
 [node name="TextBox" parent="." index="2" instance=ExtResource("3_ifwan")]
 position = Vector2(25, 150)
 text = "> TEMPER - INT (7):
-	Scrappy will gain and lose TEMPER as he fights.  When Scrappy receives damage, lower his TEMPER.  If TEMPER ever reaches 0, Scrappy becomes ANGRY.  TEMPER cannot be changed if it is at 0.
+	TEMPER is Scrappy's health pool.  If TEMPER ever reaches 0, Scrappy becomes ANGRY.  The damage instance that set TEMPER to 0 does not wipe Scrappy.  TEMPER cannot be changed if it is 0.
 
 > ANGRY - BOOL (False):
-	Cannot be changed if Scrappy's TEMPER is 0.
+	Cannot be changed if TEMPER is 0.
 
-> ALLOWANCE - PASSIVE:
+> GOOD LUCK - PASSIVE (Difficulty A-B):
 	TEMPER can only be decreased by 3 per damage instance.
 
 > WIPE CONDITION:

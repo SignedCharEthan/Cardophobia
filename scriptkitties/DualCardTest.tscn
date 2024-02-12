@@ -1,0 +1,16 @@
+[gd_scene load_steps=4 format=3 uid="uid://c14vmeyrf46yn"]
+
+[ext_resource type="Script" path="res://main/Card.gd" id="1_gk2cr"]
+[ext_resource type="PackedScene" uid="uid://61r7s2d0wbxx" path="res://main/RectangleComponent.tscn" id="2_j6tl5"]
+[ext_resource type="PackedScene" uid="uid://4ocy0xo1vsey" path="res://scriptkitties/VariableOverhead.tscn" id="3_cvu7l"]
+
+[node name="DualCardTest" type="Node2D"]
+script = ExtResource("1_gk2cr")
+
+[node name="RectangleComponent" parent="." instance=ExtResource("2_j6tl5")]
+width = 750
+height = 1050
+color = Color(1, 1, 1, 1)
+
+[node name="VariableOverhead" parent="." instance=ExtResource("3_cvu7l")]
+variables = Array[String]([])
