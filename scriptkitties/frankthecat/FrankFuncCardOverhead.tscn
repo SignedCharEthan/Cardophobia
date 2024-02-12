@@ -9,22 +9,37 @@
 script = ExtResource("1_bpgyl")
 
 [node name="RectangleComponent" parent="." instance=ExtResource("2_lej2i")]
+width = 750
+height = 1050
 color = Color(1, 1, 1, 1)
 
 [node name="ComponentContainer" parent="." instance=ExtResource("3_l3t6x")]
 position = Vector2(25, 25)
+spacing = 40
 
 [node name="func1" parent="ComponentContainer" instance=ExtResource("3_fdsom")]
 visible = false
+kitty_name = "Frank"
+function_name = ""
+function_script = ""
 
 [node name="func2" parent="ComponentContainer" instance=ExtResource("3_fdsom")]
 visible = false
 position = Vector2(0, 40)
+kitty_name = "Frank"
+function_name = ""
+function_script = ""
 
 [node name="func3" parent="ComponentContainer" instance=ExtResource("3_fdsom")]
 visible = false
 position = Vector2(0, 80)
+kitty_name = "Frank"
+function_name = ""
+function_script = ""
 
 [node name="func4" parent="ComponentContainer" instance=ExtResource("3_fdsom")]
 visible = false
 position = Vector2(0, 120)
+kitty_name = "Frank"
+function_name = ""
+function_script = ""

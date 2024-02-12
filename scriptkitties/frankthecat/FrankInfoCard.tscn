@@ -16,7 +16,7 @@ color = Color(1, 1, 1, 1)
 
 [node name="Name" parent="." instance=ExtResource("3_4hnnc")]
 position = Vector2(0, 25)
-text = "Scrappy"
+text = "Frank the Cat"
 theme = ExtResource("4_im3hr")
 bound_size = Vector2(750, 100)
 font_size = 50
@@ -24,8 +24,9 @@ alignment = 1
 
 [node name="TextBox" parent="." instance=ExtResource("3_4hnnc")]
 position = Vector2(25, 150)
-text = "> TEMPER - INT (7):
-	Scrappy will gain and lose TEMPER as he fights.  When Scrappy receives damage, lower his TEMPER.  If TEMPER ever reaches 0, Scrappy becomes ANGRY.  TEMPER cannot be changed if it is at 0.
+text = "Frank the Cat is a blind, deaf, and mute cat who derives ephemeral powers from the Eldritch Cats.
+
+> 
 
 > ANGRY - BOOL (False):
 	Cannot be changed if Scrappy's TEMPER is 0.

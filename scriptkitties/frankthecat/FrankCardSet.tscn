@@ -8,7 +8,24 @@
 script = ExtResource("1_p8dfj")
 
 [node name="divine_inference" parent="." instance=ExtResource("2_0fd6j")]
+name_1 = "divine_grant"
+scr_1 = "(choose 1 WISDOM to become True)"
+pre_2 = "SEE"
+name_2 = "pinpoint"
+scr_2 = "(Frank's next attack deals double damage.)
+func()"
+pre_3 = "HEAR"
+name_3 = "distract"
+scr_3 = "deal 2 damage
+func()"
+pre_4 = "SPEAK"
+name_4 = "screech"
+scr_4 = "HEAR -> False
+deal 5 damage
+func()"
 
 [node name="FrankFuncCardOverhead" parent="." instance=ExtResource("2_0fd6j")]
+visible = false
 
 [node name="FrankInfoCard" parent="." instance=ExtResource("3_6fthk")]
+visible = false
