@@ -2,7 +2,7 @@
 
 extends Card
 
-@export_category("Cardophobia - Scrappy Overhead")
+@export_category("ScriptKitties - Scrappy Overhead")
 
 @export var main_name = "Scrappy" as String
 

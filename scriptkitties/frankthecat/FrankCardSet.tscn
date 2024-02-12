@@ -1,0 +1,14 @@
+[gd_scene load_steps=4 format=3 uid="uid://qhvgt0bg54fx"]
+
+[ext_resource type="Script" path="res://main/CardSet.gd" id="1_p8dfj"]
+[ext_resource type="PackedScene" uid="uid://cqy0ge72v1ojj" path="res://scriptkitties/frankthecat/FrankFuncCardOverhead.tscn" id="2_0fd6j"]
+[ext_resource type="PackedScene" uid="uid://ifd12em7qji6" path="res://scriptkitties/frankthecat/FrankInfoCard.tscn" id="3_6fthk"]
+
+[node name="FrankCardSet" type="Node2D"]
+script = ExtResource("1_p8dfj")
+
+[node name="divine_inference" parent="." instance=ExtResource("2_0fd6j")]
+
+[node name="FrankFuncCardOverhead" parent="." instance=ExtResource("2_0fd6j")]
+
+[node name="FrankInfoCard" parent="." instance=ExtResource("3_6fthk")]

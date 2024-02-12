@@ -32,33 +32,32 @@ font_size = 60
 alignment = 1
 
 [node name="Atk" type="Sprite2D" parent="."]
-position = Vector2(80, 450)
-scale = Vector2(0.05, 0.05)
+position = Vector2(50, 250)
+scale = Vector2(0.04, 0.04)
 texture = ExtResource("5_c402m")
 
 [node name="Hp" type="Sprite2D" parent="."]
-position = Vector2(670, 450)
-scale = Vector2(0.05, 0.05)
+position = Vector2(50, 150)
+scale = Vector2(0.04, 0.04)
 texture = ExtResource("6_8sso0")
 
 [node name="AtkStat" parent="." instance=ExtResource("3_f5ivv")]
-position = Vector2(150, 420)
+position = Vector2(125, 220)
 text = "1"
 theme = ExtResource("7_j8upt")
 bound_size = Vector2(100, 100)
 font_size = 50
 
 [node name="HpStat" parent="." instance=ExtResource("3_f5ivv")]
-position = Vector2(500, 420)
+position = Vector2(125, 120)
 text = "1"
 theme = ExtResource("7_j8upt")
 bound_size = Vector2(100, 100)
 font_size = 50
-alignment = 2
 
 [node name="AbilDesc" parent="." instance=ExtResource("3_f5ivv")]
-position = Vector2(25, 405)
+position = Vector2(25, 495)
 text = ""
 theme = ExtResource("7_j8upt")
 bound_size = Vector2(700, 500)
-font_size = 22
+font_size = 25

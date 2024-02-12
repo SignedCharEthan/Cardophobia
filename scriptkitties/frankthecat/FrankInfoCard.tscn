@@ -1,0 +1,40 @@
+[gd_scene load_steps=6 format=3 uid="uid://ifd12em7qji6"]
+
+[ext_resource type="Script" path="res://main/Card.gd" id="1_n1uwu"]
+[ext_resource type="PackedScene" uid="uid://61r7s2d0wbxx" path="res://main/RectangleComponent.tscn" id="2_qw2cq"]
+[ext_resource type="PackedScene" uid="uid://dqsbnew2b43yl" path="res://main/TextBox.tscn" id="3_4hnnc"]
+[ext_resource type="Theme" uid="uid://bari5vyxhrtx4" path="res://themes/CategoryTitle.tres" id="4_im3hr"]
+[ext_resource type="Theme" uid="uid://un1iq34c5jv5" path="res://themes/BodyText.tres" id="5_bs2t6"]
+
+[node name="FrankInfoCard" type="Node2D"]
+script = ExtResource("1_n1uwu")
+
+[node name="RectangleComponent" parent="." instance=ExtResource("2_qw2cq")]
+width = 750
+height = 1050
+color = Color(1, 1, 1, 1)
+
+[node name="Name" parent="." instance=ExtResource("3_4hnnc")]
+position = Vector2(0, 25)
+text = "Scrappy"
+theme = ExtResource("4_im3hr")
+bound_size = Vector2(750, 100)
+font_size = 50
+alignment = 1
+
+[node name="TextBox" parent="." instance=ExtResource("3_4hnnc")]
+position = Vector2(25, 150)
+text = "> TEMPER - INT (7):
+	Scrappy will gain and lose TEMPER as he fights.  When Scrappy receives damage, lower his TEMPER.  If TEMPER ever reaches 0, Scrappy becomes ANGRY.  TEMPER cannot be changed if it is at 0.
+
+> ANGRY - BOOL (False):
+	Cannot be changed if Scrappy's TEMPER is 0.
+
+> ALLOWANCE - PASSIVE:
+	TEMPER can only be decreased by 3 per damage instance.
+
+> WIPE CONDITION:
+	Scrappy wipes when he takes damage while his TEMPER is 0."
+theme = ExtResource("5_bs2t6")
+bound_size = Vector2(700, 1000)
+font_size = 30

@@ -33,4 +33,4 @@ func _local_update() -> void:
 	hpStat.text = str(hp_stat)
 	abilDesc.text = ability_desc
 	abilDesc.position.x = 25
-	abilDesc.position.y = 1050/2 - abilDesc.getContentBounds().y - 120
+	abilDesc.position.y = 1050/2 - abilDesc.getContentBounds().y - 30

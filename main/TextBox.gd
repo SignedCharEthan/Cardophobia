@@ -49,25 +49,32 @@ func _local_update() -> void:
 	textBox.size = bound_size
 	textBox.tab_size = tab_size
 	
-	var bbcode_text = applyBBCode()
-	textBox.parse_bbcode(bbcode_text)
+	var final_text = text
+	final_text = prettifyText(final_text)
+	final_text = applyBBCode(final_text)
+	textBox.parse_bbcode(final_text)
 	
 	textBox.theme = theme
 	
 	textBox.set("theme_override_font_sizes/normal_font_size", font_size)
 
+func prettifyText(text: String) -> String:
+	text = text.replace("->", "→")
+	text = text.replace("<=", "≤")
+	text = text.replace(">=", "≥")
+	
+	return text
 
-func applyBBCode() -> String:
-	var bbcode_text = text
+func applyBBCode(text: String) -> String:
 	
 	if alignment == 0:
-		bbcode_text = "[left]" + str(bbcode_text) + "[/left]"
+		text = "[left]" + str(text) + "[/left]"
 	elif alignment == 1:
-		bbcode_text = "[center]" + str(bbcode_text) + "[/center]"
+		text = "[center]" + str(text) + "[/center]"
 	elif alignment == 2:
-		bbcode_text = "[right]" + str(bbcode_text) + "[/right]"
+		text = "[right]" + str(text) + "[/right]"
 	
-	return bbcode_text
+	return text
 
 ## Retrieve the text box's theme's font.
 func getFont() -> Font:

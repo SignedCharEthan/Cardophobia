@@ -2,10 +2,6 @@
 
 class_name AbilityFuncCall extends CardComponent
 
-@onready var kittyName = $KittyName as TextBox
-@onready var functionName = $FunctionName as TextBox
-@onready var functionScript = $FunctionScript as TextBox
-
 @export_category("ScriptKitties - Function Call")
 
 @export var kitty_name = "Kitty" as String:
@@ -20,23 +16,43 @@ class_name AbilityFuncCall extends CardComponent
 	set(new_function_script):
 		function_script = new_function_script
 		_local_update()
+@export var prerequisite = "" as String:
+	set(new_prereq):
+		prerequisite = new_prereq
+		_local_update()
 		
 
 func _local_update() -> void:
-	kittyName = $KittyName as TextBox
-	functionName = $FunctionName as TextBox
-	functionScript = $FunctionScript as TextBox
+	var kittyName = $KittyName as TextBox
+	var functionName = $FunctionName as TextBox
+	var functionScript = $FunctionScript as TextBox
+	var prereqBox = $Prereq as TextBox
+	
+	if (prerequisite == "" or prerequisite == null):
+		prereqBox.text = ""
+		prereqBox.position = Vector2.ZERO
+	else:
+		prereqBox.text = prerequisite + " :: "
+		prereqBox.position = Vector2.ZERO
 	
 	kittyName.text = kitty_name
-	kittyName.position = Vector2.ZERO
+	kittyName.position = Vector2(
+		prereqBox.position.x + prereqBox.getContentBounds().x, 0)
 	functionName.text = "." + function_name + "()"
-	functionName.position = Vector2(kittyName.getContentBounds().x, 0)
+	functionName.position = Vector2(
+		kittyName.position.x + kittyName.getContentBounds().x, 0)
 	functionScript.text = function_script
 	functionScript.position = Vector2(0, kittyName.getContentBounds().y)
+	
 	
 	super()
 
 func getContentBounds() -> Vector2:
+	var kittyName = $KittyName as TextBox
+	var functionName = $FunctionName as TextBox
+	var functionScript = $FunctionScript as TextBox
+	var prereqBox = $Prereq
+	
 	if (function_name == ""):
 		return Vector2.ZERO
 	

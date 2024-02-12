@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://mgyppjnsnfe2" path="res://main/CardSet.tscn" id="1_3pyqj"]
 [ext_resource type="PackedScene" uid="uid://nvj0gbgmmrpn" path="res://scriptkitties/ScenarioInfoCardOverhead.tscn" id="2_3c3jb"]
-[ext_resource type="PackedScene" uid="uid://b4hec78755lsa" path="res://scriptkitties/EnemyCardOverhead.tscn" id="2_uha5c"]
+[ext_resource type="PackedScene" uid="uid://dmp4gly6s5o6w" path="res://scriptkitties/EnemyCardOverhead.tscn" id="2_uha5c"]
 
 [node name="EvilAppliancesAB" instance=ExtResource("1_3pyqj")]
 
@@ -14,9 +14,11 @@ scenario_desc = "The appliances in your owner's apartment have gone rogue.  Kill
 t_name = "Vacuum"
 t_atk = 2
 t_hp = 3
+t_img = "C:/Users/emanr/Documents/Godot/Cardophobia/scriptkitties/art/Vacuum.png"
 b_name = "Black Hole Machine"
 b_atk = 3
 b_hp = 4
+b_img = "C:/Users/emanr/Documents/Godot/Cardophobia/scriptkitties/art/Black Hole Machine.png"
 
 [node name="Iron" parent="." index="2" instance=ExtResource("2_uha5c")]
 t_name = "Iron"
@@ -25,6 +27,7 @@ t_hp = 3
 b_name = "Fire Mouse"
 b_atk = 4
 b_hp = 5
+b_img = null
 
 [node name="Washer" parent="." index="3" instance=ExtResource("2_uha5c")]
 t_name = "Washer"
@@ -63,9 +66,11 @@ t_name = "Fridge"
 t_atk = 2
 t_hp = 4
 t_abil = "Kitty gets -1 hand size while active."
+t_img = "C:/Users/emanr/Documents/Godot/Cardophobia/scriptkitties/art/Fridge.png"
 b_name = "Cryo Blast"
 b_hp = 5
 b_abil = "Kitty gets -1 hand size while active."
+b_img = "C:/Users/emanr/Documents/Godot/Cardophobia/scriptkitties/art/Cryo Blast.png"
 
 [node name="PantPress" parent="." index="8" instance=ExtResource("2_uha5c")]
 t_name = "Pant Press"
