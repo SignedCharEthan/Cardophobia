@@ -8,8 +8,9 @@ class_name ComponentContainer extends CardComponent
 	set(new_spacing):
 		spacing = new_spacing
 		_local_update()
+		_post_update()
 
-func _local_update() -> void:
+func _post_update() -> void:
 	var curY = 0
 	for comp in getComponents():
 		comp.position.y = curY

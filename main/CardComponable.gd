@@ -15,11 +15,15 @@ func _editor_update() -> void:
 	_local_update()
 	for comp in getComponents():
 		comp._editor_update()
+	_post_update()
 
 ## Updates only local stuff, does not call child updates.
 func _local_update() -> void:
 	pass
 
+## Updates AFTER all children update
+func _post_update() -> void:
+	pass
 
 ## Get all CardComponents of this Card/Component.
 func getComponents() -> Array[CardComponent]:

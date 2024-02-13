@@ -18,12 +18,12 @@ func resetTexts() -> void:
 
 func spreadTexts() -> void:
 
-	var pow = findPower(variables.size())
+	var power = findPower(variables.size())
 	var total_dist = size.x * 2 + size.y * 2 as float
 	
 	for i in range(variables.size()):
 		var tb = get_child(i) as TextBoxCentered
-		var dist_perc = float(i)/float(pow)
+		var dist_perc = float(i)/float(power)
 		var wrap_dist = dist_perc * total_dist # Pixels to be wrapped
 		
 		tb.position = findWrapDist(size.x, size.y, wrap_dist)

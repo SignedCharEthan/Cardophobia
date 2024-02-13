@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://c3x75353nxgy2"]
+[gd_scene load_steps=10 format=3 uid="uid://c3x75353nxgy2"]
 
 [ext_resource type="Script" path="res://scriptkitties/DefaultFuncCard.gd" id="1_vyulx"]
 [ext_resource type="PackedScene" uid="uid://c1baw1f6j4fvx" path="res://main/ComponentContainer.tscn" id="2_4aie2"]
@@ -7,10 +7,14 @@
 [ext_resource type="PackedScene" uid="uid://4ocy0xo1vsey" path="res://scriptkitties/VariableOverhead.tscn" id="5_h4phl"]
 [ext_resource type="Theme" uid="uid://boqnny5sqo68n" path="res://themes/Script.tres" id="6_mrnlx"]
 [ext_resource type="PackedScene" uid="uid://dcfftsbomyglo" path="res://main/CardComponent.tscn" id="7_xbnir"]
+[ext_resource type="PackedScene" uid="uid://dqsbnew2b43yl" path="res://main/TextBox.tscn" id="8_wa8pw"]
+[ext_resource type="Theme" uid="uid://be0uoxwo7i3ub" path="res://themes/CardTyping.tres" id="9_l8xrj"]
 
 [node name="DefaultFuncCard" type="Node2D"]
 script = ExtResource("1_vyulx")
-variable_type = null
+pre_1 = "EX"
+name_1 = "ample"
+scr_1 = "Waiting for something to happen?"
 
 [node name="Background" parent="." instance=ExtResource("2_pu0nr")]
 width = 750
@@ -18,35 +22,38 @@ height = 1050
 color = Color(1, 1, 1, 1)
 
 [node name="FuncContainer" parent="." instance=ExtResource("2_4aie2")]
-position = Vector2(60, 100)
+position = Vector2(60, 130)
 spacing = 40
 
 [node name="func1" parent="FuncContainer" instance=ExtResource("3_8csx4")]
-visible = false
-function_name = ""
-function_script = ""
+function_name = "ample"
+prerequisite = "EX"
+bound_size = Vector2(630, 500)
 
 [node name="func2" parent="FuncContainer" instance=ExtResource("3_8csx4")]
 visible = false
-position = Vector2(0, 40)
+position = Vector2(0, 135)
 function_name = ""
 function_script = ""
+bound_size = Vector2(630, 500)
 
 [node name="func3" parent="FuncContainer" instance=ExtResource("3_8csx4")]
 visible = false
-position = Vector2(0, 80)
+position = Vector2(0, 175)
 function_name = ""
 function_script = ""
+bound_size = Vector2(630, 500)
 
 [node name="func4" parent="FuncContainer" instance=ExtResource("3_8csx4")]
 visible = false
-position = Vector2(0, 120)
+position = Vector2(0, 215)
 function_name = ""
 function_script = ""
+bound_size = Vector2(630, 500)
 
 [node name="VariableOverhead" parent="." instance=ExtResource("5_h4phl")]
 position = Vector2(375, 525)
-variables = Array[String](["False", "True"])
+variables = ["False", "True"]
 theme = ExtResource("6_mrnlx")
 size = Vector2(700, 1000)
 
@@ -88,3 +95,25 @@ rotation = 2.35619
 scale = Vector2(1, -1)
 width = 50
 height = 5
+
+[node name="TopBar" parent="." instance=ExtResource("7_xbnir")]
+
+[node name="RectangleComponent" parent="TopBar" instance=ExtResource("2_pu0nr")]
+position = Vector2(200, 100)
+width = 350
+height = 5
+
+[node name="KittyName" parent="TopBar" instance=ExtResource("8_wa8pw")]
+position = Vector2(0, 45)
+text = "Kitty"
+theme = ExtResource("9_l8xrj")
+bound_size = Vector2(335, 300)
+font_size = 48
+alignment = 2
+
+[node name="VarType" parent="TopBar" instance=ExtResource("8_wa8pw")]
+position = Vector2(415, 45)
+text = "BOOL"
+theme = ExtResource("9_l8xrj")
+bound_size = Vector2(335, 300)
+font_size = 48

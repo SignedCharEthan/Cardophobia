@@ -4,32 +4,23 @@ class_name AbilityFuncCall extends CardComponent
 
 @export_category("ScriptKitties - Function Call")
 
-@export var kitty_name = "Kitty" as String:
-	set(new_kitty_name):
-		kitty_name = new_kitty_name
-		_local_update()
-@export var function_name = "func" as String:
-	set(new_function_name):
-		function_name = new_function_name
-		_local_update()
-@export var function_script = "Waiting for something to happen?" as String:
-	set(new_function_script):
-		function_script = new_function_script
-		_local_update()
-@export var prerequisite = "" as String:
-	set(new_prereq):
-		prerequisite = new_prereq
-		_local_update()
+@onready var kittyName = $KittyName as TextBox
+@onready var functionName = $FunctionName as TextBox
+@onready var functionScript = $FunctionScript as TextBox
+@onready var prereqBox = $Prereq as TextBox
+
+@export var kitty_name = "Kitty" as String
+@export var function_name = "func" as String
+@export var function_script = "Waiting for something to happen?" as String
+@export var prerequisite = "" as String
 
 @export_group("Text")
+@export var title_size = 36 as int
+@export var script_size = 30 as int
 @export var bound_size = Vector2(500, 500) as Vector2
 
 
 func _local_update() -> void:
-	var kittyName = $KittyName as TextBox
-	var functionName = $FunctionName as TextBox
-	var functionScript = $FunctionScript as TextBox
-	var prereqBox = $Prereq as TextBox
 	
 	if (prerequisite == "" or prerequisite == null):
 		prereqBox.text = ""
@@ -48,13 +39,17 @@ func _local_update() -> void:
 	functionScript.position = Vector2(0, kittyName.getContentBounds().y)
 	functionScript.bound_size = bound_size
 	
+	updateFonts()
+	
 	super()
+	
+func updateFonts() -> void:
+	prereqBox.font_size = title_size
+	kittyName.font_size = title_size
+	functionName.font_size = title_size
+	functionScript.font_size = script_size
 
 func getContentBounds() -> Vector2:
-	var kittyName = $KittyName as TextBox
-	var functionName = $FunctionName as TextBox
-	var functionScript = $FunctionScript as TextBox
-	var prereqBox = $Prereq
 	
 	if (function_name == ""):
 		return Vector2.ZERO

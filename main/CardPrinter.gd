@@ -1,6 +1,6 @@
 extends Node2D
 
-@onready var subView = $SubViewport as SubViewport
+@onready var subView = $SubViewportContainer/SubViewport as SubViewport
 @onready var cardParent = subView.get_child(0) as CardSet
 @onready var cards = cardParent.get_children()
 
@@ -16,7 +16,10 @@ func _ready() -> void:
 func _spreadCards():
 	for x in range(3):
 		for y in range(3):
-			var card = cards[y*3 + x]
+			var c = y*3 + x
+			if c >= cards.size():
+				break
+			var card = cards[c]
 			card = card as Card
 			card.position.x += 750*x
 			card.position.y += 1050*y

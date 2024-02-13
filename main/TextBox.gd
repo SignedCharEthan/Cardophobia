@@ -57,6 +57,8 @@ func _local_update() -> void:
 	textBox.theme = theme
 	
 	textBox.set("theme_override_font_sizes/normal_font_size", font_size)
+	
+	super()
 
 func prettifyText(text: String) -> String:
 	text = text.replace("->", "→")
