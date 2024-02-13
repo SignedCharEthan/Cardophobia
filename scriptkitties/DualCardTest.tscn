@@ -1,8 +1,10 @@
-[gd_scene load_steps=4 format=3 uid="uid://c14vmeyrf46yn"]
+[gd_scene load_steps=6 format=3 uid="uid://c14vmeyrf46yn"]
 
 [ext_resource type="Script" path="res://main/Card.gd" id="1_gk2cr"]
 [ext_resource type="PackedScene" uid="uid://61r7s2d0wbxx" path="res://main/RectangleComponent.tscn" id="2_j6tl5"]
 [ext_resource type="PackedScene" uid="uid://4ocy0xo1vsey" path="res://scriptkitties/VariableOverhead.tscn" id="3_cvu7l"]
+[ext_resource type="Theme" uid="uid://boqnny5sqo68n" path="res://themes/Script.tres" id="4_03k8t"]
+[ext_resource type="PackedScene" uid="uid://dcfftsbomyglo" path="res://main/CardComponent.tscn" id="5_hhpnh"]
 
 [node name="DualCardTest" type="Node2D"]
 script = ExtResource("1_gk2cr")
@@ -13,4 +15,46 @@ height = 1050
 color = Color(1, 1, 1, 1)
 
 [node name="VariableOverhead" parent="." instance=ExtResource("3_cvu7l")]
-variables = Array[String]([])
+position = Vector2(375, 525)
+variables = Array[String](["False", "True"])
+theme = ExtResource("4_03k8t")
+size = Vector2(700, 1000)
+
+[node name="Border" parent="." instance=ExtResource("5_hhpnh")]
+
+[node name="RectangleComponent" parent="Border" instance=ExtResource("2_j6tl5")]
+position = Vector2(50, 50)
+width = 650
+height = 5
+
+[node name="RectangleComponent3" parent="Border" instance=ExtResource("2_j6tl5")]
+position = Vector2(50, 50)
+rotation = 1.5708
+width = 950
+height = 5
+
+[node name="RectangleComponent4" parent="Border" instance=ExtResource("2_j6tl5")]
+position = Vector2(50, 1000)
+width = 650
+height = 5
+
+[node name="RectangleComponent5" parent="Border" instance=ExtResource("2_j6tl5")]
+position = Vector2(700, 50)
+rotation = 1.5708
+width = 950
+height = 5
+
+[node name="Arrow" parent="." instance=ExtResource("5_hhpnh")]
+
+[node name="RectangleComponent" parent="Arrow" instance=ExtResource("2_j6tl5")]
+position = Vector2(350, 50)
+rotation = 0.785398
+width = 50
+height = 5
+
+[node name="RectangleComponent2" parent="Arrow" instance=ExtResource("2_j6tl5")]
+position = Vector2(400, 50)
+rotation = 2.35619
+scale = Vector2(1, -1)
+width = 50
+height = 5

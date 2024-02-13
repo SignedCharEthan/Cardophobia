@@ -1,0 +1,77 @@
+[gd_scene load_steps=8 format=3 uid="uid://c3x75353nxgy2"]
+
+[ext_resource type="Script" path="res://scriptkitties/DefaultFuncCard.gd" id="1_vyulx"]
+[ext_resource type="PackedScene" uid="uid://c1baw1f6j4fvx" path="res://main/ComponentContainer.tscn" id="2_4aie2"]
+[ext_resource type="PackedScene" uid="uid://61r7s2d0wbxx" path="res://main/RectangleComponent.tscn" id="2_pu0nr"]
+[ext_resource type="PackedScene" uid="uid://c1f1rpvdv7f4u" path="res://scriptkitties/AbilityFuncCall.tscn" id="3_8csx4"]
+[ext_resource type="PackedScene" uid="uid://4ocy0xo1vsey" path="res://scriptkitties/VariableOverhead.tscn" id="5_h4phl"]
+[ext_resource type="Theme" uid="uid://boqnny5sqo68n" path="res://themes/Script.tres" id="6_mrnlx"]
+[ext_resource type="PackedScene" uid="uid://dcfftsbomyglo" path="res://main/CardComponent.tscn" id="7_xbnir"]
+
+[node name="DefaultFuncCard" type="Node2D"]
+script = ExtResource("1_vyulx")
+
+[node name="Background" parent="." instance=ExtResource("2_pu0nr")]
+width = 750
+height = 1050
+color = Color(1, 1, 1, 1)
+
+[node name="FuncContainer" parent="." instance=ExtResource("2_4aie2")]
+position = Vector2(60, 100)
+spacing = 40
+
+[node name="func1" parent="FuncContainer" instance=ExtResource("3_8csx4")]
+
+[node name="func2" parent="FuncContainer" instance=ExtResource("3_8csx4")]
+position = Vector2(0, 203)
+
+[node name="func3" parent="FuncContainer" instance=ExtResource("3_8csx4")]
+position = Vector2(0, 406)
+
+[node name="func4" parent="FuncContainer" instance=ExtResource("3_8csx4")]
+position = Vector2(0, 609)
+
+[node name="VariableOverhead" parent="." instance=ExtResource("5_h4phl")]
+position = Vector2(375, 525)
+variables = Array[String](["False", "True"])
+theme = ExtResource("6_mrnlx")
+size = Vector2(700, 1000)
+
+[node name="Border" parent="." instance=ExtResource("7_xbnir")]
+
+[node name="RectangleComponent" parent="Border" instance=ExtResource("2_pu0nr")]
+position = Vector2(50, 50)
+width = 650
+height = 5
+
+[node name="RectangleComponent3" parent="Border" instance=ExtResource("2_pu0nr")]
+position = Vector2(50, 50)
+rotation = 1.5708
+width = 950
+height = 5
+
+[node name="RectangleComponent4" parent="Border" instance=ExtResource("2_pu0nr")]
+position = Vector2(50, 1000)
+width = 650
+height = 5
+
+[node name="RectangleComponent5" parent="Border" instance=ExtResource("2_pu0nr")]
+position = Vector2(700, 50)
+rotation = 1.5708
+width = 950
+height = 5
+
+[node name="Arrow" parent="." instance=ExtResource("7_xbnir")]
+
+[node name="RectangleComponent" parent="Arrow" instance=ExtResource("2_pu0nr")]
+position = Vector2(350, 50)
+rotation = 0.785398
+width = 50
+height = 5
+
+[node name="RectangleComponent2" parent="Arrow" instance=ExtResource("2_pu0nr")]
+position = Vector2(400, 50)
+rotation = 2.35619
+scale = Vector2(1, -1)
+width = 50
+height = 5

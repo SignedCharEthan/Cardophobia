@@ -20,7 +20,10 @@ class_name AbilityFuncCall extends CardComponent
 	set(new_prereq):
 		prerequisite = new_prereq
 		_local_update()
-		
+
+@export_group("Text")
+@export var bound_size = Vector2(500, 500) as Vector2
+
 
 func _local_update() -> void:
 	var kittyName = $KittyName as TextBox
@@ -43,7 +46,7 @@ func _local_update() -> void:
 		kittyName.position.x + kittyName.getContentBounds().x, 0)
 	functionScript.text = function_script
 	functionScript.position = Vector2(0, kittyName.getContentBounds().y)
-	
+	functionScript.bound_size = bound_size
 	
 	super()
 

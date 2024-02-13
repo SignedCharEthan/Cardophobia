@@ -32,6 +32,6 @@ font_size = 40
 position = Vector2(0, 55)
 text = "Waiting for something to happen?"
 theme = ExtResource("5_jelsh")
-bound_size = Vector2(700, 1000)
+bound_size = Vector2(500, 500)
 font_size = 36
 tab_size = 2

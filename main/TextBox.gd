@@ -20,7 +20,7 @@ class_name TextBox extends CardComponent
 		font_size = theme.default_font_size
 		_local_update()
 
-@export var bound_size := Vector2(300, 300):
+@export var bound_size := Vector2(300, 300) as Vector2:
 	set(new_bs):
 		bound_size = new_bs
 		_local_update()
