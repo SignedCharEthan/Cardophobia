@@ -10,6 +10,7 @@
 
 [node name="DefaultFuncCard" type="Node2D"]
 script = ExtResource("1_vyulx")
+variable_type = null
 
 [node name="Background" parent="." instance=ExtResource("2_pu0nr")]
 width = 750
@@ -21,15 +22,27 @@ position = Vector2(60, 100)
 spacing = 40
 
 [node name="func1" parent="FuncContainer" instance=ExtResource("3_8csx4")]
+visible = false
+function_name = ""
+function_script = ""
 
 [node name="func2" parent="FuncContainer" instance=ExtResource("3_8csx4")]
-position = Vector2(0, 203)
+visible = false
+position = Vector2(0, 40)
+function_name = ""
+function_script = ""
 
 [node name="func3" parent="FuncContainer" instance=ExtResource("3_8csx4")]
-position = Vector2(0, 406)
+visible = false
+position = Vector2(0, 80)
+function_name = ""
+function_script = ""
 
 [node name="func4" parent="FuncContainer" instance=ExtResource("3_8csx4")]
-position = Vector2(0, 609)
+visible = false
+position = Vector2(0, 120)
+function_name = ""
+function_script = ""
 
 [node name="VariableOverhead" parent="." instance=ExtResource("5_h4phl")]
 position = Vector2(375, 525)

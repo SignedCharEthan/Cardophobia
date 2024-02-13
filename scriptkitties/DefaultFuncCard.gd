@@ -6,6 +6,8 @@ class_name DefaultFuncCard extends Card
 
 @export var kitty_name = "Kitty" as String
 
+@export_group("Function Abilities")
+
 @export var pre_1 = "" as String
 @export var name_1 = "" as String
 @export_multiline var scr_1 = "" as String
@@ -22,13 +24,20 @@ class_name DefaultFuncCard extends Card
 @export var name_4 = "" as String
 @export_multiline var scr_4 = "" as String
 
+@export_group("Outside")
+
+@export_enum("BOOL", "INT") var variable_type = "BOOL" as String
+
 @onready var func1 = $FuncContainer/func1 as AbilityFuncCall
 @onready var func2 = $FuncContainer/func2 as AbilityFuncCall
 @onready var func3 = $FuncContainer/func3 as AbilityFuncCall
 @onready var func4 = $FuncContainer/func4 as AbilityFuncCall
 
+@onready var varOver = $VariableOverhead as VariableOverhead
+
 func _local_update() -> void:
 	updateAbils()
+	updateVars()
 
 func updateAbils() -> void:
 	var pre_all = [pre_1, pre_2, pre_3, pre_4]
@@ -45,3 +54,9 @@ func updateAbils() -> void:
 		abil.function_script = scr_all[i]
 		
 		abil.visible = (name_all[i] != "")
+
+func updateVars() -> void:
+	if variable_type == "BOOL":
+		varOver.variables = ["False", "True"]
+	elif variable_type == "INT":
+		varOver.variables = ["0", "1", "2", "3", "4", "5", "6", "7"]

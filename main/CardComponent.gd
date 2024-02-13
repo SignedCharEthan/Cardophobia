@@ -1,3 +1,5 @@
+@tool
+
 class_name CardComponent extends CardComponable
 
 ## Retrieve the bounds of this shape.
