@@ -28,7 +28,7 @@ func spreadTexts() -> void:
 		
 		tb.position = findWrapDist(size.x, size.y, wrap_dist)
 		tb.rotation_degrees = (
-			findWrapRotation(size.x, size.y, wrap_dist)) * 360/4
+			findWrapRotation(size.x, size.y, wrap_dist)) * 90
 		tb.text = variables[i]
 
 
@@ -65,7 +65,7 @@ func findWrapRotation(width, height, wrap_dist) -> int:
 		width/2 + height,
 		3*width/2 + height,
 		3*width/2 + 2*height,
-		2*width, 2*height
+		2*width + 2*height
 	]
 	
 	for i in range(partitions.size()):
@@ -74,7 +74,7 @@ func findWrapRotation(width, height, wrap_dist) -> int:
 	return partitions.size()
 
 func changeVisibility() -> void:
-	for i in range(8):
+	for i in range(get_child_count()):
 		get_child(i).visible = (i < variables.size())
 
 ## Find the closest power of 2, including the given number.

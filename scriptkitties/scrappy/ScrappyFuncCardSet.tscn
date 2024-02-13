@@ -7,6 +7,7 @@
 [node name="ScrappyFuncs" instance=ExtResource("1_pp867")]
 
 [node name="Scrappy" parent="." index="0" instance=ExtResource("2_wl662")]
+visible = false
 
 [node name="ScrappyFuncCardOverhead" parent="." index="1" instance=ExtResource("3_2ach3")]
 u_name_1 = "scratch"
@@ -24,6 +25,7 @@ d_script_2 = "deal 4 damage
 take 1 damage"
 
 [node name="ScrappyFuncCardOverhead2" parent="." index="2" instance=ExtResource("3_2ach3")]
+visible = false
 u_name_1 = "poke"
 u_script_1 = "deal 1 damage
 func()"
@@ -39,6 +41,7 @@ else:
 	TEMPER -> TEMPER + 3"
 
 [node name="ScrappyFuncCardOverhead3" parent="." index="3" instance=ExtResource("3_2ach3")]
+visible = false
 u_name_1 = "meditate"
 u_script_1 = "(Scrappy cannot take damage for the rest of the round)"
 d_name_1 = "ponder"
@@ -50,6 +53,7 @@ if ANGRY:
 	deal 2 damage"
 
 [node name="ScrappyFuncCardOverhead4" parent="." index="4" instance=ExtResource("3_2ach3")]
+visible = false
 u_name_1 = "pounce"
 u_script_1 = "(Deal any amount of damage. Take 1 damage the same amount of times.)"
 d_name_1 = "slash"
@@ -63,6 +67,7 @@ d_script_2 = "if ANGRY:
 	func()"
 
 [node name="ScrappyFuncCardOverhead5" parent="." index="5" instance=ExtResource("3_2ach3")]
+visible = false
 u_name_1 = "prowl"
 u_script_1 = "ANGRY -> False
 TEMPER -> TEMPER + 1
@@ -78,6 +83,7 @@ d_script_1 = "if (at least 5 enemies are wiped):
 	ANGRY -> True"
 
 [node name="ScrappyFuncCardOverhead6" parent="." index="6" instance=ExtResource("3_2ach3")]
+visible = false
 u_name_1 = "hiss"
 u_script_1 = "if TEMPER <= 2:
 	ANGRY -> True"
@@ -92,6 +98,7 @@ if ANGRY:
 	(7 - TEMPER)"
 
 [node name="ScrappyFuncCardOverhead7" parent="." index="7" instance=ExtResource("3_2ach3")]
+visible = false
 u_name_1 = "glare"
 u_script_1 = "if (the enemy is damaged, but not dead):
 	ANGRY -> True"
@@ -101,6 +108,7 @@ d_name_1 = "shove"
 d_script_1 = "deal damage equal to TEMPER"
 
 [node name="ScrappyFuncCardOverhead8" parent="." index="8" instance=ExtResource("3_2ach3")]
+visible = false
 u_name_1 = "brawl"
 u_script_1 = "deal 2 damage
 if TEMPER <= 2:

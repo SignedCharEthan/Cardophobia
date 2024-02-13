@@ -27,7 +27,7 @@ class_name DefaultFuncCard extends Card
 
 @export_group("Variable Card")
 
-@export_enum("BOOL", "INT") var variable_type = "BOOL" as String
+@export_enum("nil", "BOOL", "INT", "LONG") var variable_type = "BOOL" as String
 
 @onready var func1 = $FuncContainer/func1 as AbilityFuncCall
 @onready var func2 = $FuncContainer/func2 as AbilityFuncCall
@@ -62,10 +62,15 @@ func updateAbils() -> void:
 		abil.visible = (name_all[i] != "")
 
 func updateVars() -> void:
-	if variable_type == "BOOL":
+	if variable_type == "nil":
+		varOver.variables = []
+	elif variable_type == "BOOL":
 		varOver.variables = ["False", "True"]
 	elif variable_type == "INT":
 		varOver.variables = ["0", "1", "2", "3", "4", "5", "6", "7"]
+	elif variable_type == "LONG":
+		varOver.variables = ["0", "1", "2", "3", "4", "5", "6", "7", "8",
+			"9", "10", "11", "12", "13", "14", "15"]
 
 func updateTopBar() -> void:
 	kittyName.text = kitty_name

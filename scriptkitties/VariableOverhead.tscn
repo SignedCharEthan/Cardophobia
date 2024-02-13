@@ -38,3 +38,35 @@ text = ""
 [node name="TextBoxCentered8" parent="." instance=ExtResource("2_g3mlw")]
 visible = false
 text = ""
+
+[node name="TextBoxCentered9" parent="." instance=ExtResource("2_g3mlw")]
+visible = false
+text = ""
+
+[node name="TextBoxCentered10" parent="." instance=ExtResource("2_g3mlw")]
+visible = false
+text = ""
+
+[node name="TextBoxCentered11" parent="." instance=ExtResource("2_g3mlw")]
+visible = false
+text = ""
+
+[node name="TextBoxCentered12" parent="." instance=ExtResource("2_g3mlw")]
+visible = false
+text = ""
+
+[node name="TextBoxCentered13" parent="." instance=ExtResource("2_g3mlw")]
+visible = false
+text = ""
+
+[node name="TextBoxCentered14" parent="." instance=ExtResource("2_g3mlw")]
+visible = false
+text = ""
+
+[node name="TextBoxCentered15" parent="." instance=ExtResource("2_g3mlw")]
+visible = false
+text = ""
+
+[node name="TextBoxCentered16" parent="." instance=ExtResource("2_g3mlw")]
+visible = false
+text = ""

@@ -1,0 +1,40 @@
+[gd_scene load_steps=3 format=3 uid="uid://bg6ocfhca8mqr"]
+
+[ext_resource type="Script" path="res://main/CardSet.gd" id="1_i14ee"]
+[ext_resource type="PackedScene" uid="uid://c3x75353nxgy2" path="res://scriptkitties/DefaultFuncCard.tscn" id="2_yyntp"]
+
+[node name="ScrappyCardSet" type="Node2D"]
+script = ExtResource("1_i14ee")
+
+[node name="scratch" parent="." instance=ExtResource("2_yyntp")]
+visible = false
+kitty_name = "Scrappy"
+kitty_nickname = "Scrappy"
+pre_1 = ""
+name_1 = "scratch"
+scr_1 = "deal 3 damage"
+name_2 = "head_scratch"
+scr_2 = "TEMPER -> TEMPER + 1
+if not ANGRY:
+	TEMPER -> TEMPER + 2"
+name_3 = "deep_scratch"
+scr_3 = "deal 2 damage
+if ANGRY:
+	deal 4 damage after enemy attack"
+variable_type = "INT"
+
+[node name="scratchB" parent="." instance=ExtResource("2_yyntp")]
+kitty_name = "Scrappy"
+kitty_nickname = "Scrappy"
+pre_1 = ""
+name_1 = "scratch"
+scr_1 = "deal 3 damage"
+variable_type = "INT"
+
+[node name="template3" parent="." instance=ExtResource("2_yyntp")]
+visible = false
+kitty_name = "Scrappy"
+kitty_nickname = "Scrappy"
+pre_1 = ""
+name_1 = ""
+scr_1 = ""

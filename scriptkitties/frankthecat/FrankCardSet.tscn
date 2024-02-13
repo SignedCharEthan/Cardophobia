@@ -8,25 +8,111 @@
 script = ExtResource("1_p8dfj")
 
 [node name="Info" parent="." instance=ExtResource("3_6fthk")]
+visible = false
 
 [node name="divine_grant" parent="." instance=ExtResource("4_p2rih")]
+visible = false
 kitty_name = "Frank the Cat"
 kitty_nickname = "Frank"
+pre_1 = ""
 name_1 = "divine_grant"
-scr_1 = "(choose 1 WISDOM to become True)"
+scr_1 = "# Choose 1 WISDOM to become True."
 pre_2 = "SEE"
 name_2 = "pinpoint"
 scr_2 = "SEE -> False
-(Frank's next attack deals double damage.)
-func()"
+deal 6 damage
+deal 2 damage per True WISDOM"
 pre_3 = "HEAR"
-name_3 = "distract"
-scr_3 = "deal 2 damage
+name_3 = "screech"
+scr_3 = "HEAR -> False
+# Frank's next attack deals 2x damage. #
 func()"
 pre_4 = "SPEAK"
-name_4 = "screech"
-scr_4 = "HEAR -> False
-deal 5 damage
+name_4 = "growl"
+scr_4 = "SPEAK -> False
+SEE -> True
+HEAR -> True
 func()"
 
-[node name="DefaultFuncCard" parent="." instance=ExtResource("4_p2rih")]
+[node name="studious_observation" parent="." instance=ExtResource("4_p2rih")]
+visible = false
+kitty_name = "Frank the Cat"
+kitty_nickname = "Frank"
+pre_1 = ""
+name_1 = "studious_observation"
+scr_1 = "SEE -> True
+HEAR -> True"
+name_2 = "tendril_poke"
+scr_2 = "deal 2 damage
+if HEAR:
+	enemy gets -2 ATK"
+pre_3 = "SEE"
+name_3 = "size_up"
+scr_3 = "if HP >= 6:
+	HEAR -> True
+if HP >= 8:
+	SPEAK -> True
+if HP >= 10:
+	func()"
+
+[node name="lock_in" parent="." instance=ExtResource("4_p2rih")]
+visible = false
+kitty_name = "Frank the Cat"
+kitty_nickname = "Frank"
+pre_1 = ""
+name_1 = "lock_in"
+scr_1 = "if SEE is nil:
+	create var: SEE
+SEE -> True"
+pre_2 = "SEE"
+name_2 = "thousand_eye_stare"
+scr_2 = "take 1 damage X times
+deal (3 * X) damage"
+pre_3 = "SEE"
+name_3 = "accurate_jab"
+scr_3 = "deal 4 damage
+deal 1 damage per True WISDOM"
+
+[node name="eavesdrop" parent="." instance=ExtResource("4_p2rih")]
+visible = false
+kitty_name = "Frank the Cat"
+kitty_nickname = "Frank"
+pre_1 = ""
+name_1 = "eavesdrop"
+scr_1 = "HEAR -> True
+if SPEAK:
+	func()"
+pre_2 = "HEAR"
+
+[node name="template3" parent="." instance=ExtResource("4_p2rih")]
+visible = false
+kitty_name = "Frank the Cat"
+kitty_nickname = "Frank"
+pre_1 = ""
+name_1 = "terrify"
+scr_1 = "SPEAK -> True
+discard enemy"
+pre_2 = "SPEAK"
+name_2 = "stutter"
+scr_2 = "discard hand
+func()"
+pre_3 = "SPEAK"
+name_3 = "cough"
+scr_3 = "# the next function call's prerequisite is automatically met #
+func()"
+
+[node name="template4" parent="." instance=ExtResource("4_p2rih")]
+visible = false
+kitty_name = "Frank the Cat"
+kitty_nickname = "Frank"
+pre_1 = ""
+name_1 = ""
+scr_1 = ""
+
+[node name="template5" parent="." instance=ExtResource("4_p2rih")]
+visible = false
+kitty_name = "Frank the Cat"
+kitty_nickname = "Frank"
+pre_1 = ""
+name_1 = ""
+scr_1 = ""

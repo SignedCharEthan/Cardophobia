@@ -23,14 +23,14 @@ font_size = 50
 alignment = 1
 
 [node name="TextBox" parent="." instance=ExtResource("3_4hnnc")]
-position = Vector2(25, 150)
+position = Vector2(25, 125)
 text = "Frank the Cat is a blind, deaf, and mute cat who derives ephemeral powers from the Eldritch Cats.
 
 > SEE / HEAR / SPEAK - BOOL (True):
-	These are Frank's Wisdom.  When Frank takes damage, change a true Wisdom to false or permanently remove a false Wisdom by bottom-decking it as a func card.  Frank's scripts sometimes require a certain Wisdom to be true to be called.
+	These are Frank's Wisdom.  When Frank takes damage, change a true Wisdom to false or permanently remove a false Wisdom by discarding it as a func card.  Frank's scripts often require a certain Wisdom to be true to be called.
 
 > MISFORTUNE - PASSIVE (Difficulty C+):
-	When Frank receives more than 4 damage, it is considered two damage instances.
+	When Frank receives 5+ damage, it is considered two damage instances.
 
 > WIPE CONDITION:
 	Frank wipes when he receives damage with no Wisdom."
