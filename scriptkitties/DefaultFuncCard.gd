@@ -27,7 +27,9 @@ class_name DefaultFuncCard extends Card
 
 @export_group("Variable Card")
 
-@export_enum("nil", "BOOL", "INT", "LONG") var variable_type = "BOOL" as String
+@export_enum(
+	"nil", "BOOL", "SHORT", "INT", "LONG", "SUPER_LONG", "SIGNED INT"
+	) var variable_type = "BOOL" as String
 
 @onready var func1 = $FuncContainer/func1 as AbilityFuncCall
 @onready var func2 = $FuncContainer/func2 as AbilityFuncCall
@@ -61,16 +63,34 @@ func updateAbils() -> void:
 		
 		abil.visible = (name_all[i] != "")
 
+func var_map(x: int, y: int = x) -> Array:
+	var to_str = func (x) -> String:
+		return str(x)
+	
+	if x == y:
+		return range(x).map(to_str)
+	else:
+		return range(x, y).map(to_str)
+	
+
 func updateVars() -> void:
+	var vt = []
 	if variable_type == "nil":
-		varOver.variables = []
+		pass
 	elif variable_type == "BOOL":
-		varOver.variables = ["False", "True"]
+		vt = ["False", "True"]
+	elif variable_type == "SHORT":
+		vt = var_map(4)
 	elif variable_type == "INT":
-		varOver.variables = ["0", "1", "2", "3", "4", "5", "6", "7"]
+		vt = var_map(8)
 	elif variable_type == "LONG":
-		varOver.variables = ["0", "1", "2", "3", "4", "5", "6", "7", "8",
-			"9", "10", "11", "12", "13", "14", "15"]
+		vt = var_map(16)
+	elif variable_type == "SUPER_LONG":
+		vt = var_map(32)
+	elif variable_type == "SIGNED INT":
+		vt = var_map(4)
+		vt.append_array(var_map(-4, 0))
+	varOver.variables = vt
 
 func updateTopBar() -> void:
 	kittyName.text = kitty_name
