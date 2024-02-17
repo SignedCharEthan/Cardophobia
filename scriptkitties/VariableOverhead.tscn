@@ -1,0 +1,136 @@
+[gd_scene load_steps=3 format=3 uid="uid://4ocy0xo1vsey"]
+
+[ext_resource type="Script" path="res://scriptkitties/VariableOverhead.gd" id="1_qe27e"]
+[ext_resource type="PackedScene" uid="uid://bn6cu83bsgbjw" path="res://main/TextBoxCentered.tscn" id="2_g3mlw"]
+
+[node name="VariableOverhead" type="Node2D"]
+script = ExtResource("1_qe27e")
+variables = Array[String]([])
+
+[node name="TextBoxCentered" parent="." instance=ExtResource("2_g3mlw")]
+visible = false
+text = ""
+
+[node name="TextBoxCentered2" parent="." instance=ExtResource("2_g3mlw")]
+visible = false
+text = ""
+
+[node name="TextBoxCentered3" parent="." instance=ExtResource("2_g3mlw")]
+visible = false
+text = ""
+
+[node name="TextBoxCentered4" parent="." instance=ExtResource("2_g3mlw")]
+visible = false
+text = ""
+
+[node name="TextBoxCentered5" parent="." instance=ExtResource("2_g3mlw")]
+visible = false
+text = ""
+
+[node name="TextBoxCentered6" parent="." instance=ExtResource("2_g3mlw")]
+visible = false
+text = ""
+
+[node name="TextBoxCentered7" parent="." instance=ExtResource("2_g3mlw")]
+visible = false
+text = ""
+
+[node name="TextBoxCentered8" parent="." instance=ExtResource("2_g3mlw")]
+visible = false
+text = ""
+
+[node name="TextBoxCentered9" parent="." instance=ExtResource("2_g3mlw")]
+visible = false
+text = ""
+
+[node name="TextBoxCentered10" parent="." instance=ExtResource("2_g3mlw")]
+visible = false
+text = ""
+
+[node name="TextBoxCentered11" parent="." instance=ExtResource("2_g3mlw")]
+visible = false
+text = ""
+
+[node name="TextBoxCentered12" parent="." instance=ExtResource("2_g3mlw")]
+visible = false
+text = ""
+
+[node name="TextBoxCentered13" parent="." instance=ExtResource("2_g3mlw")]
+visible = false
+text = ""
+
+[node name="TextBoxCentered14" parent="." instance=ExtResource("2_g3mlw")]
+visible = false
+text = ""
+
+[node name="TextBoxCentered15" parent="." instance=ExtResource("2_g3mlw")]
+visible = false
+text = ""
+
+[node name="TextBoxCentered16" parent="." instance=ExtResource("2_g3mlw")]
+visible = false
+text = ""
+
+[node name="TextBoxCentered17" parent="." instance=ExtResource("2_g3mlw")]
+visible = false
+text = ""
+
+[node name="TextBoxCentered18" parent="." instance=ExtResource("2_g3mlw")]
+visible = false
+text = ""
+
+[node name="TextBoxCentered19" parent="." instance=ExtResource("2_g3mlw")]
+visible = false
+text = ""
+
+[node name="TextBoxCentered20" parent="." instance=ExtResource("2_g3mlw")]
+visible = false
+text = ""
+
+[node name="TextBoxCentered21" parent="." instance=ExtResource("2_g3mlw")]
+visible = false
+text = ""
+
+[node name="TextBoxCentered22" parent="." instance=ExtResource("2_g3mlw")]
+visible = false
+text = ""
+
+[node name="TextBoxCentered23" parent="." instance=ExtResource("2_g3mlw")]
+visible = false
+text = ""
+
+[node name="TextBoxCentered24" parent="." instance=ExtResource("2_g3mlw")]
+visible = false
+text = ""
+
+[node name="TextBoxCentered25" parent="." instance=ExtResource("2_g3mlw")]
+visible = false
+text = ""
+
+[node name="TextBoxCentered26" parent="." instance=ExtResource("2_g3mlw")]
+visible = false
+text = ""
+
+[node name="TextBoxCentered27" parent="." instance=ExtResource("2_g3mlw")]
+visible = false
+text = ""
+
+[node name="TextBoxCentered28" parent="." instance=ExtResource("2_g3mlw")]
+visible = false
+text = ""
+
+[node name="TextBoxCentered29" parent="." instance=ExtResource("2_g3mlw")]
+visible = false
+text = ""
+
+[node name="TextBoxCentered30" parent="." instance=ExtResource("2_g3mlw")]
+visible = false
+text = ""
+
+[node name="TextBoxCentered31" parent="." instance=ExtResource("2_g3mlw")]
+visible = false
+text = ""
+
+[node name="TextBoxCentered32" parent="." instance=ExtResource("2_g3mlw")]
+visible = false
+text = ""

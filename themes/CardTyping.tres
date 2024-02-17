@@ -1,0 +1,8 @@
+[gd_resource type="Theme" load_steps=2 format=3 uid="uid://be0uoxwo7i3ub"]
+
+[ext_resource type="FontFile" uid="uid://dwp0i1y77rfl8" path="res://themes/fonts/Bahianita-Regular.ttf" id="1_isuvh"]
+
+[resource]
+default_font = ExtResource("1_isuvh")
+default_font_size = 50
+RichTextLabel/colors/default_color = Color(0.439216, 0.439216, 0.439216, 1)

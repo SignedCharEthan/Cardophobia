@@ -1,0 +1,49 @@
+[gd_scene load_steps=8 format=3 uid="uid://cwyv4qo63payy"]
+
+[ext_resource type="Script" path="res://scriptkitties/EnemyStatColumn.gd" id="1_bqsns"]
+[ext_resource type="PackedScene" uid="uid://dcfftsbomyglo" path="res://main/CardComponent.tscn" id="2_l6yo4"]
+[ext_resource type="PackedScene" uid="uid://dqsbnew2b43yl" path="res://main/TextBox.tscn" id="3_b0qlt"]
+[ext_resource type="Texture2D" uid="uid://b6183gqk34n54" path="res://scriptkitties/art/Stat Holder.png" id="3_j26e1"]
+[ext_resource type="Texture2D" uid="uid://cshhutup6qvmt" path="res://scriptkitties/art/HP.png" id="4_xtudd"]
+[ext_resource type="Texture2D" uid="uid://b8j3soi0ux5d" path="res://scriptkitties/art/ATK.png" id="5_614au"]
+[ext_resource type="Theme" uid="uid://bv7vhhuruiyl8" path="res://themes/BIGStats.tres" id="7_r446w"]
+
+[node name="EnemyStatColumn" type="Node2D"]
+script = ExtResource("1_bqsns")
+stat_nums = Array[int]([1, 1])
+
+[node name="Holders" parent="." instance=ExtResource("2_l6yo4")]
+
+[node name="HP" type="Sprite2D" parent="Holders"]
+texture = ExtResource("3_j26e1")
+
+[node name="ATK" type="Sprite2D" parent="Holders"]
+texture = ExtResource("3_j26e1")
+
+[node name="Icons" parent="." instance=ExtResource("2_l6yo4")]
+position = Vector2(-200, 0)
+
+[node name="HP" type="Sprite2D" parent="Icons"]
+scale = Vector2(0.7, 0.7)
+texture = ExtResource("4_xtudd")
+
+[node name="ATK" type="Sprite2D" parent="Icons"]
+scale = Vector2(0.7, 0.7)
+texture = ExtResource("5_614au")
+
+[node name="Stats" parent="." instance=ExtResource("2_l6yo4")]
+position = Vector2(-1175, -300)
+
+[node name="HP" parent="Stats" instance=ExtResource("3_b0qlt")]
+text = "1"
+theme = ExtResource("7_r446w")
+bound_size = Vector2(2000, 600)
+font_size = -1
+alignment = 2
+
+[node name="ATK" parent="Stats" instance=ExtResource("3_b0qlt")]
+text = "1"
+theme = ExtResource("7_r446w")
+bound_size = Vector2(2000, 600)
+font_size = -1
+alignment = 2

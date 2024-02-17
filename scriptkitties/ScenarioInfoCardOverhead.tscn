@@ -1,0 +1,30 @@
+[gd_scene load_steps=6 format=3 uid="uid://nvj0gbgmmrpn"]
+
+[ext_resource type="Script" path="res://scriptkitties/ScenarioInfoCardOverhead.gd" id="2_0trsr"]
+[ext_resource type="PackedScene" uid="uid://61r7s2d0wbxx" path="res://main/RectangleComponent.tscn" id="2_fgpkx"]
+[ext_resource type="PackedScene" uid="uid://dqsbnew2b43yl" path="res://main/TextBox.tscn" id="3_wrapj"]
+[ext_resource type="Theme" uid="uid://bari5vyxhrtx4" path="res://themes/CategoryTitle.tres" id="4_7yglt"]
+[ext_resource type="Theme" uid="uid://un1iq34c5jv5" path="res://themes/BodyText.tres" id="5_5gssi"]
+
+[node name="ScenarioOverhead" type="Node2D"]
+script = ExtResource("2_0trsr")
+
+[node name="RectangleComponent" parent="." instance=ExtResource("2_fgpkx")]
+width = 750
+height = 1050
+color = Color(1, 1, 1, 1)
+
+[node name="Scenario" parent="." instance=ExtResource("3_wrapj")]
+position = Vector2(0, 257)
+text = "Scenario"
+theme = ExtResource("4_7yglt")
+bound_size = Vector2(750, 300)
+font_size = 70
+alignment = 1
+
+[node name="Desc" parent="." instance=ExtResource("3_wrapj")]
+position = Vector2(25, 410)
+text = "Description."
+theme = ExtResource("5_5gssi")
+bound_size = Vector2(700, 600)
+font_size = 30

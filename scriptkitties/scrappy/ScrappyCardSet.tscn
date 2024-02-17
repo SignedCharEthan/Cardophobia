@@ -1,0 +1,267 @@
+[gd_scene load_steps=5 format=3 uid="uid://bg6ocfhca8mqr"]
+
+[ext_resource type="Script" path="res://scriptkitties/scrappy/ScrappyCardSet.gd" id="1_knivn"]
+[ext_resource type="PackedScene" uid="uid://c0nr5dqhx8mqq" path="res://scriptkitties/scrappy/ScrappyMainCard.tscn" id="2_veqaj"]
+[ext_resource type="PackedScene" uid="uid://c3x75353nxgy2" path="res://scriptkitties/DefaultFuncCard.tscn" id="2_yyntp"]
+[ext_resource type="PackedScene" uid="uid://dlxkmwcr6benm" path="res://scriptkitties/scrappy/ScrappyInfoCard.tscn" id="4_dgsai"]
+
+[node name="ScrappyCardSet" type="Node2D"]
+script = ExtResource("1_knivn")
+
+[node name="ScrappyMain" parent="." instance=ExtResource("2_veqaj")]
+
+[node name="scratchF" parent="." instance=ExtResource("2_yyntp")]
+kitty_name = "Scrappy"
+kitty_nickname = "Scrappy"
+pre_1 = ""
+name_1 = "scratch"
+scr_1 = "deal 4 damage"
+name_2 = "head_scratch"
+scr_2 = "TEMPER -> TEMPER + 1
+if not ANGRY:
+	TEMPER -> TEMPER + 2"
+name_3 = "deep_scratch"
+scr_3 = "deal 2 damage
+if ANGRY:
+	deal 4 damage after enemy turn
+if TEMPER <= 3:
+	deal 4 damage after enemy turn"
+variable_type = "INT"
+
+[node name="kickF" parent="." instance=ExtResource("2_yyntp")]
+kitty_name = "Scrappy"
+kitty_nickname = "Scrappy"
+pre_1 = ""
+name_1 = "kick"
+scr_1 = "deal (TEMPER) damage"
+name_2 = "kick_flip"
+scr_2 = "deal 3 damage
+if ANGRY:
+	TEMPER -> TEMPER + 2"
+variable_type = "INT"
+
+[node name="biteF" parent="." instance=ExtResource("2_yyntp")]
+kitty_name = "Scrappy"
+kitty_nickname = "Scrappy"
+pre_1 = ""
+name_1 = "bite"
+scr_1 = "deal 2 damage
+enemy gets -2 ATK"
+name_2 = "hard_clamp"
+scr_2 = "enemy gets -3 ATK
+if ANGRY:
+	deal 4 damage after enemy turn"
+name_3 = "bloodthirsty_bite"
+scr_3 = "after enemy turn:
+	deal 3 damage
+	TEMPER -> TEMPER + (damage dealt)"
+variable_type = "INT"
+
+[node name="tackleF" parent="." instance=ExtResource("2_yyntp")]
+kitty_name = "Scrappy"
+kitty_nickname = "Scrappy"
+pre_1 = ""
+name_1 = "tackle"
+scr_1 = "deal 2 damage
+if ANGRY:
+	deal 4 damage
+	take 2 damage"
+name_2 = "rollout"
+scr_2 = "discard enemy
+if ANGRY:
+	ANGRY -> False
+	deal 2 damage
+	func()"
+variable_type = "INT"
+
+[node name="prowlF" parent="." instance=ExtResource("2_yyntp")]
+kitty_name = "Scrappy"
+kitty_nickname = "Scrappy"
+pre_1 = ""
+name_1 = "prowl"
+scr_1 = "ANGRY -> False
+your attacks get +2 dmg this round
+func()"
+name_2 = "size_up"
+scr_2 = "if max HP >= 7:
+	ANGRY -> True
+	func()"
+
+[node name="multi_swipeF" parent="." instance=ExtResource("2_yyntp")]
+kitty_name = "Scrappy"
+kitty_nickname = "Scrappy"
+pre_1 = ""
+name_1 = "multi_swipe"
+scr_1 = "deal 2 dmg
+if TEMPER <= 3:
+	deal 3 dmg
+if ANGRY:
+	deal 3 dmg"
+name_2 = "feint_swipe"
+scr_2 = "deal 5 nonlethal dmg"
+name_3 = "hype_up"
+scr_3 = "# if the enemy is damaged, but still alive: #
+	ANGRY -> True"
+
+[node name="atrophyF" parent="." instance=ExtResource("2_yyntp")]
+kitty_name = "Scrappy"
+kitty_nickname = "Scrappy"
+pre_1 = ""
+name_1 = "atrophy"
+scr_1 = "TEMPER -> TEMPER - 3
+deal 7 damage
+if ANGRY:
+	deal 4 damage"
+name_2 = "inoculate"
+scr_2 = "ANGRY -> False
+lose hand
+TEMPER -> TEMPER + 3"
+
+[node name="mixupF" parent="." instance=ExtResource("2_yyntp")]
+kitty_name = "Scrappy"
+kitty_nickname = "Scrappy"
+pre_1 = ""
+name_1 = "mixup"
+scr_1 = "if ANGRY:
+	# swap hand card with overhead
+	card (matching var types) #
+func()"
+name_2 = "confuse"
+scr_2 = "# swap enemy's ATK and HP #
+func()"
+
+[node name="kickB" parent="." instance=ExtResource("2_yyntp")]
+kitty_name = "Scrappy"
+kitty_nickname = "Scrappy"
+front_side = false
+pre_1 = ""
+name_1 = "kick"
+scr_1 = "deal (TEMPER) damage"
+name_2 = "knee_shatter"
+scr_2 = "if ANGRY:
+	ANGRY -> False
+	TEMPER -> max HP"
+variable_type = "INT"
+
+[node name="scratchB" parent="." instance=ExtResource("2_yyntp")]
+kitty_name = "Scrappy"
+kitty_nickname = "Scrappy"
+front_side = false
+pre_1 = ""
+name_1 = "scratch"
+scr_1 = "deal 4 damage"
+name_2 = "manic_scratch"
+scr_2 = "let X
+TEMPER -> TEMPER - X
+if ANGRY:
+	deal (X * 3) damage
+else:
+	deal (X * 2) damage"
+name_3 = "toe_scratch"
+scr_3 = "deal 3 damage
+TEMPER -> TEMPER + 1"
+variable_type = "INT"
+
+[node name="ScrappyInfo" parent="." instance=ExtResource("4_dgsai")]
+
+[node name="prowlB" parent="." instance=ExtResource("2_yyntp")]
+kitty_name = "Scrappy"
+kitty_nickname = "Scrappy"
+front_side = false
+pre_1 = ""
+name_1 = "prowl"
+scr_1 = "ANGRY -> False
+your attacks get +2 dmg this round
+func()"
+name_2 = "leer"
+scr_2 = "# after the enemy attacks you, it attacks itself #"
+name_3 = "glare"
+scr_3 = "enemy gets -3 ATK
+TEMPER -> TEMPER + 1"
+
+[node name="tackleB" parent="." instance=ExtResource("2_yyntp")]
+kitty_name = "Scrappy"
+kitty_nickname = "Scrappy"
+front_side = false
+pre_1 = ""
+name_1 = "tackle"
+scr_1 = "deal 2 damage
+if ANGRY:
+	deal 4 damage
+	take 2 damage"
+name_2 = "restrictive_grasp"
+scr_2 = "if ANGRY:
+	ANGRY -> False
+	cannot deal damage this turn
+	cannot take damage this turn
+	func()"
+variable_type = "INT"
+
+[node name="biteB" parent="." instance=ExtResource("2_yyntp")]
+kitty_name = "Scrappy"
+kitty_nickname = "Scrappy"
+front_side = false
+pre_1 = ""
+name_1 = "bite"
+scr_1 = "deal 2 damage
+enemy gets -2 ATK"
+name_2 = "jugular_bite"
+scr_2 = "deal (4 - TEMPER) damage
+if ANGRY:
+	deal (7 - TEMPER) damage"
+variable_type = "INT"
+
+[node name="mixupB" parent="." instance=ExtResource("2_yyntp")]
+kitty_name = "Scrappy"
+kitty_nickname = "Scrappy"
+front_side = false
+pre_1 = ""
+name_1 = "mixup"
+scr_1 = "if ANGRY:
+	# swap hand card with overhead
+	card (matching var types) #
+func()"
+name_2 = "unleash"
+scr_2 = "if TEMPER <= 2:
+	ANGRY -> True
+if TEMPER <= 4:
+	deal 4 dmg"
+name_3 = "enrage"
+scr_3 = "if 6+ enemies have died:
+	ANGRY -> True"
+
+[node name="atrophyB" parent="." instance=ExtResource("2_yyntp")]
+kitty_name = "Scrappy"
+kitty_nickname = "Scrappy"
+front_side = false
+pre_1 = ""
+name_1 = "atrophy"
+scr_1 = "TEMPER -> TEMPER - 3
+deal 7 damage
+if ANGRY:
+	deal 4 damage"
+name_2 = "retaliation"
+scr_2 = "if enemy ATK >= 5:
+	ANGRY -> True
+after enemy attack:
+	TEMPER -> TEMPER + 1"
+name_3 = "bloodthirsty_barrage"
+scr_3 = "TEMPER -> TEMPER - 2
+your attacks get +1 damage this round
+func()"
+
+[node name="multi_swipeB" parent="." instance=ExtResource("2_yyntp")]
+kitty_name = "Scrappy"
+kitty_nickname = "Scrappy"
+front_side = false
+pre_1 = ""
+name_1 = "multi_swipe"
+scr_1 = "deal 2 dmg
+if TEMPER <= 3:
+	deal 3 dmg
+if ANGRY:
+	deal 3 dmg"
+name_2 = "calm_swipes"
+scr_2 = "if ANGRY:
+	do (TEMPER) times:
+		deal 1 dmg"

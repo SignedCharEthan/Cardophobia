@@ -4,7 +4,7 @@
 
 [resource]
 default_font = SubResource("SystemFont_yycih")
-default_font_size = 50
+default_font_size = 40
 RichTextLabel/colors/default_color = Color(0.392157, 0.392157, 0.392157, 1)
 RichTextLabel/colors/font_outline_color = Color(1, 1, 1, 1)
 RichTextLabel/constants/outline_size = 5

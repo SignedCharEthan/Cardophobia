@@ -1,0 +1,43 @@
+[gd_scene load_steps=7 format=3 uid="uid://d03hu4gv62ctv"]
+
+[ext_resource type="Script" path="res://scriptkitties/EnemyHalfOverhead.gd" id="1_vract"]
+[ext_resource type="PackedScene" uid="uid://61r7s2d0wbxx" path="res://main/RectangleComponent.tscn" id="2_t5i3k"]
+[ext_resource type="PackedScene" uid="uid://dqsbnew2b43yl" path="res://main/TextBox.tscn" id="3_f5ivv"]
+[ext_resource type="Theme" uid="uid://bari5vyxhrtx4" path="res://themes/CategoryTitle.tres" id="4_dtogs"]
+[ext_resource type="Theme" uid="uid://boqnny5sqo68n" path="res://themes/Script.tres" id="7_j8upt"]
+[ext_resource type="PackedScene" uid="uid://cwyv4qo63payy" path="res://scriptkitties/EnemyStatColumn.tscn" id="8_1rg5w"]
+
+[node name="EnemyHalfOverhead" type="Node2D"]
+script = ExtResource("1_vract")
+stat_nums = Array[int]([1, 1])
+
+[node name="Background" parent="." instance=ExtResource("2_t5i3k")]
+visible = false
+width = 750
+height = 1050
+color = Color(1, 1, 1, 1)
+
+[node name="Divider" parent="." instance=ExtResource("2_t5i3k")]
+visible = false
+position = Vector2(25, 523)
+width = 700
+height = 4
+
+[node name="Name" parent="." instance=ExtResource("3_f5ivv")]
+position = Vector2(100, 10)
+text = "Enemy"
+theme = ExtResource("4_dtogs")
+bound_size = Vector2(650, 300)
+font_size = 50
+alignment = 1
+
+[node name="AbilDesc" parent="." instance=ExtResource("3_f5ivv")]
+position = Vector2(150, 495)
+text = ""
+theme = ExtResource("7_j8upt")
+bound_size = Vector2(550, 500)
+font_size = 25
+
+[node name="EnemyStatColumn" parent="." instance=ExtResource("8_1rg5w")]
+position = Vector2(50, 120)
+scale = Vector2(0.05, 0.05)
