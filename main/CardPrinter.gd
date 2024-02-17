@@ -8,22 +8,31 @@ extends Node2D
 
 var Node_CutLines = preload("res://main/CutLines.tscn")
 
+@onready var back_half = false as bool
+
 func _ready() -> void:
+	_setAllInvis()
 	_spreadCards()
+	_addCutLines()
 	cardParent._editor_update()
 	
-	
+func _setAllInvis():
+	for card in cards:
+		card.visible = false
+
 func _spreadCards():
 	for x in range(3):
 		for y in range(3):
-			var c = y*3 + x
+			var c = y*3 + x + (9 * int(back_half))
 			if c >= cards.size():
 				break
 			var card = cards[c]
 			card = card as Card
 			card.position.x += 750*x
 			card.position.y += 1050*y
-	
+			card.visible = true
+
+func _addCutLines():
 	for x in range(4):
 		for y in range(4):
 			var cutLine = Node_CutLines.instantiate() as Node2D

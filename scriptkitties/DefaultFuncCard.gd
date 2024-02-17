@@ -6,6 +6,7 @@ class_name DefaultFuncCard extends Card
 
 @export var kitty_name = "Kitty" as String
 @export var kitty_nickname = "Kitty" as String
+@export var front_side = true as bool
 
 @export_group("Function Abilities")
 
@@ -40,6 +41,8 @@ class_name DefaultFuncCard extends Card
 
 @onready var kittyName = $TopBar/KittyName as TextBox
 @onready var varType = $TopBar/VarType as TextBox
+
+@onready var frontIcon = $FrontIcon as Sprite2D
 
 func _local_update() -> void:
 	updateAbils()
@@ -95,3 +98,4 @@ func updateVars() -> void:
 func updateTopBar() -> void:
 	kittyName.text = kitty_name
 	varType.text = variable_type
+	frontIcon.visible = front_side

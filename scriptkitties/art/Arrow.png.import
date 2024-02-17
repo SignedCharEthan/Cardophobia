@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c80lpky5418es"
-path="res://.godot/imported/Vacuum.png-acca6ccd428edf5fe9e082f97ae68cb1.ctex"
+uid="uid://pmehlsvyvxwp"
+path="res://.godot/imported/Arrow.png-9d9261e0eeb0d10f584dd7a683e663fc.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://scriptkitties/art/Vacuum.png"
-dest_files=["res://.godot/imported/Vacuum.png-acca6ccd428edf5fe9e082f97ae68cb1.ctex"]
+source_file="res://scriptkitties/art/Arrow.png"
+dest_files=["res://.godot/imported/Arrow.png-9d9261e0eeb0d10f584dd7a683e663fc.ctex"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c80lpky5418es"
-path="res://.godot/imported/Vacuum.png-acca6ccd428edf5fe9e082f97ae68cb1.ctex"
+uid="uid://ctootq0ljjr81"
+path="res://.godot/imported/Default Icon.png-401644c3c6b2a15a6699db1b0f85997b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://scriptkitties/art/Vacuum.png"
-dest_files=["res://.godot/imported/Vacuum.png-acca6ccd428edf5fe9e082f97ae68cb1.ctex"]
+source_file="res://scriptkitties/art/Default Icon.png"
+dest_files=["res://.godot/imported/Default Icon.png-401644c3c6b2a15a6699db1b0f85997b.ctex"]
 
 [params]
 

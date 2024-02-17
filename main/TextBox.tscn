@@ -4,6 +4,7 @@
 
 [node name="TextBox" type="Node2D"]
 script = ExtResource("1_4c8pt")
+stroke_size = null
 
 [node name="RichTextLabel" type="RichTextLabel" parent="."]
 offset_right = 300.0

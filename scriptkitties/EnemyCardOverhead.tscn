@@ -5,11 +5,13 @@
 [ext_resource type="PackedScene" uid="uid://dqsbnew2b43yl" path="res://main/TextBox.tscn" id="2_eq6mk"]
 [ext_resource type="PackedScene" uid="uid://d03hu4gv62ctv" path="res://scriptkitties/EnemyHalfOverhead.tscn" id="2_kulle"]
 [ext_resource type="Theme" uid="uid://c3jtflyapnkm7" path="res://themes/CategoryPretitle.tres" id="4_x3rq2"]
-[ext_resource type="Texture2D" uid="uid://cklt7kwi3hoal" path="res://scriptkitties/art/Vacuum.png" id="6_vx3bc"]
-[ext_resource type="Texture2D" uid="uid://ceifemiijohe5" path="res://scriptkitties/art/Black Hole Machine.png" id="7_4l241"]
+[ext_resource type="Texture2D" uid="uid://c80lpky5418es" path="res://scriptkitties/art/Vacuum.png" id="6_vx3bc"]
+[ext_resource type="Texture2D" uid="uid://cog80dxk1q78f" path="res://scriptkitties/art/Black Hole Machine.png" id="7_4l241"]
 
 [node name="EnemyCard" type="Node2D"]
 script = ExtResource("1_yo873")
+t_stat_nums = Array[int]([1, 1])
+b_stat_nums = Array[int]([2, 2])
 
 [node name="Background" parent="." instance=ExtResource("1_3blcm")]
 width = 750
@@ -40,18 +42,17 @@ height = 4
 position = Vector2(750, 1050)
 rotation = 3.14159
 enemy_name = "Harder Enemy"
-atk_stat = 2
-hp_stat = 2
+stat_nums = Array[int]([2, 2])
 
 [node name="DiffTop" parent="." instance=ExtResource("2_eq6mk")]
+position = Vector2(20, 0)
 text = "A"
 theme = ExtResource("4_x3rq2")
 bound_size = Vector2(100, 100)
 font_size = 60
-alignment = 1
 
 [node name="DiffBot" parent="." instance=ExtResource("2_eq6mk")]
-position = Vector2(750, 1050)
+position = Vector2(770, 1050)
 rotation = 3.14159
 text = "B"
 theme = ExtResource("4_x3rq2")

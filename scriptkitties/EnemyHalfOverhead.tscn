@@ -1,15 +1,15 @@
-[gd_scene load_steps=8 format=3 uid="uid://d03hu4gv62ctv"]
+[gd_scene load_steps=7 format=3 uid="uid://d03hu4gv62ctv"]
 
 [ext_resource type="Script" path="res://scriptkitties/EnemyHalfOverhead.gd" id="1_vract"]
 [ext_resource type="PackedScene" uid="uid://61r7s2d0wbxx" path="res://main/RectangleComponent.tscn" id="2_t5i3k"]
 [ext_resource type="PackedScene" uid="uid://dqsbnew2b43yl" path="res://main/TextBox.tscn" id="3_f5ivv"]
 [ext_resource type="Theme" uid="uid://bari5vyxhrtx4" path="res://themes/CategoryTitle.tres" id="4_dtogs"]
-[ext_resource type="Texture2D" uid="uid://bu1hsmnpncnxv" path="res://scriptkitties/art/ATK.png" id="5_c402m"]
-[ext_resource type="Texture2D" uid="uid://bpwr5trpasdyr" path="res://scriptkitties/art/HP.png" id="6_8sso0"]
 [ext_resource type="Theme" uid="uid://boqnny5sqo68n" path="res://themes/Script.tres" id="7_j8upt"]
+[ext_resource type="PackedScene" uid="uid://cwyv4qo63payy" path="res://scriptkitties/EnemyStatColumn.tscn" id="8_1rg5w"]
 
 [node name="EnemyHalfOverhead" type="Node2D"]
 script = ExtResource("1_vract")
+stat_nums = Array[int]([1, 1])
 
 [node name="Background" parent="." instance=ExtResource("2_t5i3k")]
 visible = false
@@ -24,40 +24,20 @@ width = 700
 height = 4
 
 [node name="Name" parent="." instance=ExtResource("3_f5ivv")]
-position = Vector2(0, 25)
+position = Vector2(100, 10)
 text = "Enemy"
 theme = ExtResource("4_dtogs")
-bound_size = Vector2(750, 300)
-font_size = 60
+bound_size = Vector2(650, 300)
+font_size = 50
 alignment = 1
 
-[node name="Atk" type="Sprite2D" parent="."]
-position = Vector2(50, 250)
-scale = Vector2(0.04, 0.04)
-texture = ExtResource("5_c402m")
-
-[node name="Hp" type="Sprite2D" parent="."]
-position = Vector2(50, 150)
-scale = Vector2(0.04, 0.04)
-texture = ExtResource("6_8sso0")
-
-[node name="AtkStat" parent="." instance=ExtResource("3_f5ivv")]
-position = Vector2(125, 220)
-text = "1"
-theme = ExtResource("7_j8upt")
-bound_size = Vector2(100, 100)
-font_size = 50
-
-[node name="HpStat" parent="." instance=ExtResource("3_f5ivv")]
-position = Vector2(125, 120)
-text = "1"
-theme = ExtResource("7_j8upt")
-bound_size = Vector2(100, 100)
-font_size = 50
-
 [node name="AbilDesc" parent="." instance=ExtResource("3_f5ivv")]
-position = Vector2(25, 495)
+position = Vector2(150, 495)
 text = ""
 theme = ExtResource("7_j8upt")
-bound_size = Vector2(700, 500)
+bound_size = Vector2(550, 500)
 font_size = 25
+
+[node name="EnemyStatColumn" parent="." instance=ExtResource("8_1rg5w")]
+position = Vector2(50, 120)
+scale = Vector2(0.05, 0.05)

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c6u1mr5jtdc75"
-path="res://.godot/imported/ScrappyIcon.png-9c662ade4917e0008afdffdceb618dc9.ctex"
+uid="uid://dkikuh61bm14b"
+path="res://.godot/imported/020824 Cat.png-92f1879139783e494fac115937c68cb9.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://scriptkitties/scrappy/ScrappyIcon.png"
-dest_files=["res://.godot/imported/ScrappyIcon.png-9c662ade4917e0008afdffdceb618dc9.ctex"]
+source_file="res://scriptkitties/scrappy/020824 Cat.png"
+dest_files=["res://.godot/imported/020824 Cat.png-92f1879139783e494fac115937c68cb9.ctex"]
 
 [params]
 

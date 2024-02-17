@@ -1,0 +1,99 @@
+[gd_scene load_steps=4 format=3 uid="uid://wlhoj4s1rvos"]
+
+[ext_resource type="PackedScene" uid="uid://mgyppjnsnfe2" path="res://main/CardSet.tscn" id="1_rhshk"]
+[ext_resource type="PackedScene" uid="uid://nvj0gbgmmrpn" path="res://scriptkitties/ScenarioInfoCardOverhead.tscn" id="2_yyts1"]
+[ext_resource type="PackedScene" uid="uid://dmp4gly6s5o6w" path="res://scriptkitties/EnemyCardOverhead.tscn" id="3_tn871"]
+
+[node name="EvilAppliancesCD" instance=ExtResource("1_rhshk")]
+
+[node name="ScenarioOverhead" parent="." index="0" instance=ExtResource("2_yyts1")]
+scenario_name = "Evil Appliances"
+scenario_desc = "Damn shawty"
+
+[node name="Vacuum" parent="." index="1" instance=ExtResource("3_tn871")]
+position = Vector2(750, 0)
+t_name = "Spacial De-Atomizer"
+t_stat_nums = Array[int]([5, 3])
+t_abil = "Kitty discards 1 hand card after each function call."
+t_diff = "C"
+t_img = "C:/Users/emanr/Documents/Godot/Cardophobia/scriptkitties/art/Vacuum.png"
+b_name = "The Suckubus"
+b_stat_nums = Array[int]([24, 3])
+b_abil = "Kitty discards hand after each function call."
+b_diff = "D"
+b_img = "C:/Users/emanr/Documents/Godot/Cardophobia/scriptkitties/art/Black Hole Machine.png"
+
+[node name="Iron" parent="." index="2" instance=ExtResource("3_tn871")]
+position = Vector2(1500, 0)
+t_name = "Steel-Willed Rat"
+t_stat_nums = Array[int]([4, 5])
+t_abil = "While this is top grave, current enemy gets +1 ATK"
+t_diff = "C"
+b_name = "Iron-God Mouse-King"
+b_stat_nums = Array[int]([20, 3])
+b_abil = "For every 5 current HP below max HP, +1 ATK"
+b_diff = "D"
+b_img = null
+
+[node name="Washer" parent="." index="3" instance=ExtResource("3_tn871")]
+position = Vector2(0, 1050)
+t_name = "Wavebringer"
+t_stat_nums = Array[int]([10, 1])
+t_abil = "After each enemy attack, Kitty discards first hand card."
+t_diff = "C"
+b_name = "Creator of Typhoons"
+b_stat_nums = Array[int]([30, 2])
+b_abil = "After each enemy attack, Kitty discards hand."
+b_diff = "D"
+
+[node name="Dryer" parent="." index="4" instance=ExtResource("3_tn871")]
+position = Vector2(750, 1050)
+t_name = "Tumbling Castle"
+t_stat_nums = Array[int]([10, 1])
+t_abil = "On wipe: discard Kitty's hand and shuffle func deck."
+t_diff = "C"
+b_name = "The Drought"
+b_stat_nums = Array[int]([30, 2])
+b_abil = "On entrance: discard Kitty's hand and shuffle func deck."
+b_diff = "D"
+
+[node name="Microwave" parent="." index="5" instance=ExtResource("3_tn871")]
+position = Vector2(1500, 1050)
+t_name = "Small Reactor"
+t_stat_nums = Array[int]([3, 8])
+t_diff = "C"
+b_name = "Devil's Radiator"
+b_stat_nums = Array[int]([15, 5])
+b_diff = "D"
+
+[node name="Toaster" parent="." index="6" instance=ExtResource("3_tn871")]
+position = Vector2(0, 2100)
+t_name = "Cremator"
+t_stat_nums = Array[int]([3, 8])
+t_abil = "Wipes after attacking."
+t_diff = "C"
+b_name = "Dragon's Burp"
+b_stat_nums = Array[int]([20, -1])
+b_abil = "Uses the top grave/urn ATK stat, then discards it."
+b_diff = "D"
+
+[node name="Fridge" parent="." index="7" instance=ExtResource("3_tn871")]
+position = Vector2(750, 2100)
+t_name = "Eternal Winter"
+t_stat_nums = Array[int]([8, 2])
+t_diff = "C"
+t_img = "C:/Users/emanr/Documents/Godot/Cardophobia/scriptkitties/art/Fridge.png"
+b_name = "The Permafrost"
+b_stat_nums = Array[int]([30, 2])
+b_abil = "\"After enemy turn\" effects do not trigger for Kitty."
+b_diff = "D"
+b_img = "C:/Users/emanr/Documents/Godot/Cardophobia/scriptkitties/art/Cryo Blast.png"
+
+[node name="PantPress" parent="." index="8" instance=ExtResource("3_tn871")]
+position = Vector2(1500, 2100)
+t_name = "Pantaloon Platoon"
+t_stat_nums = Array[int]([6, 3])
+t_diff = "C"
+b_name = "Tyrese the Kneecapper"
+b_stat_nums = Array[int]([24, 4])
+b_diff = "D"

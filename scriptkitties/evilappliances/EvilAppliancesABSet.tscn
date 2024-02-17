@@ -7,73 +7,80 @@
 [node name="EvilAppliancesAB" instance=ExtResource("1_3pyqj")]
 
 [node name="ScenarioOverhead" parent="." index="0" instance=ExtResource("2_3c3jb")]
+visible = false
 scenario_name = "Evil Appliances"
 scenario_desc = "The appliances in your owner's apartment have gone rogue.  Kill 'em."
 
 [node name="Vacuum" parent="." index="1" instance=ExtResource("2_uha5c")]
+position = Vector2(750, 0)
 t_name = "Vacuum"
-t_atk = 2
-t_hp = 3
+t_stat_nums = Array[int]([3, 3])
 t_img = "C:/Users/emanr/Documents/Godot/Cardophobia/scriptkitties/art/Vacuum.png"
 b_name = "Black Hole Machine"
-b_atk = 3
-b_hp = 4
+b_stat_nums = Array[int]([4, 3])
+b_abil = "Kitty discards 1 hand card after each function call."
 b_img = "C:/Users/emanr/Documents/Godot/Cardophobia/scriptkitties/art/Black Hole Machine.png"
 
 [node name="Iron" parent="." index="2" instance=ExtResource("2_uha5c")]
+visible = false
+position = Vector2(1500, 0)
 t_name = "Iron"
-t_atk = 4
-t_hp = 3
+t_stat_nums = Array[int]([2, 3])
 b_name = "Fire Mouse"
-b_atk = 4
-b_hp = 5
+b_stat_nums = Array[int]([3, 4])
+b_abil = "While this is top grave, current enemy gets +1 ATK"
 b_img = null
 
 [node name="Washer" parent="." index="3" instance=ExtResource("2_uha5c")]
+visible = false
+position = Vector2(0, 1050)
 t_name = "Washer"
-t_hp = 6
-t_abil = "Discard the Kitty's first hand card after each attack."
+t_stat_nums = Array[int]([4, 1])
 b_name = "Surge Master"
-b_atk = 1
-b_hp = 8
-b_abil = "Discard the Kitty's first hand card after each attack."
+b_stat_nums = Array[int]([5, 1])
+b_abil = "Kitty discards first hand card after enemy attack."
 
 [node name="Dryer" parent="." index="4" instance=ExtResource("2_uha5c")]
+visible = false
+position = Vector2(750, 1050)
 t_name = "Dryer"
-t_atk = 2
-t_hp = 5
+t_stat_nums = Array[int]([5, 1])
 b_name = "The Drought"
-b_hp = 6
+b_stat_nums = Array[int]([6, 2])
+b_abil = "On wipe: discard Kitty's hand and shuffle func deck."
 
 [node name="Microwave" parent="." index="5" instance=ExtResource("2_uha5c")]
+visible = false
+position = Vector2(1500, 1050)
 t_name = "Microwave"
-t_atk = 5
+t_stat_nums = Array[int]([2, 4])
 b_name = "Food Nukor"
-b_atk = 6
-b_hp = 1
+b_stat_nums = Array[int]([2, 6])
 
 [node name="Toaster" parent="." index="6" instance=ExtResource("2_uha5c")]
+visible = false
+position = Vector2(0, 2100)
 t_name = "Toaster"
-t_atk = 5
-t_hp = 2
+t_stat_nums = Array[int]([1, 6])
 t_abil = "Wipes after attacking."
-b_name = "Food Nukor"
-b_atk = 6
+b_name = "Incinerator"
+b_stat_nums = Array[int]([2, 6])
 b_abil = "Wipes after attacking."
 
 [node name="Fridge" parent="." index="7" instance=ExtResource("2_uha5c")]
+visible = false
+position = Vector2(750, 2100)
 t_name = "Fridge"
-t_atk = 2
-t_hp = 4
-t_abil = "Kitty gets -1 hand size while active."
+t_stat_nums = Array[int]([5, 2])
 t_img = "C:/Users/emanr/Documents/Godot/Cardophobia/scriptkitties/art/Fridge.png"
 b_name = "Cryo Blast"
-b_hp = 5
-b_abil = "Kitty gets -1 hand size while active."
+b_stat_nums = Array[int]([6, 2])
 b_img = "C:/Users/emanr/Documents/Godot/Cardophobia/scriptkitties/art/Cryo Blast.png"
 
 [node name="PantPress" parent="." index="8" instance=ExtResource("2_uha5c")]
+visible = false
+position = Vector2(1500, 2100)
 t_name = "Pant Press"
-t_hp = 6
+t_stat_nums = Array[int]([4, 3])
 b_name = "Trouser Suffocator"
-b_hp = 6
+b_stat_nums = Array[int]([5, 4])
