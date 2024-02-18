@@ -1,0 +1,17 @@
+Copyright (c) 2024 SignedCharEthan
+
+The permissions of obtaining, modifying, and redistributing this project is 
+granted to any and all persons.
+
+Permission to this project is free of charge.
+
+Within this project is a folder named "scriptkitties", which is a demo version 
+of a game created by SignedCharEthan.  Its purpose within this project is to 
+provide an example of how the project may be used, and as such, is distributed 
+with the project.
+
+Closed-source re-selling of this project, or any contenets within this project, 
+including the contents of the "scriptkitties" folder, is prohibited.  
+The "scriptkitties" folder is intellectual property of SignedCharEthan.  This 
+can be used personally, as a demo for the game, but again cannot be re-sold or 
+otherwise redistributed under any other project.
